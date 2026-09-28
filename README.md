@@ -16,8 +16,6 @@ The site is written from the prompt in `prompts/second-edition.md`. It:
 - adds a 1984–89 prologue, a decisions ledger (alternatives at the time and consequences), non-elected actors, survey voices, open questions from 2026, an adversarial review log and numbered citations;
 - offers the chart data as JSON and CSV downloads.
 
-The first version, made from the original prompt, is kept at `first-edition/`.
-
 ## Какво ако?
 
 `what-if/` is a counterfactual experiment: five alternative paths Bulgaria could have taken after 1989 (Baltic, Central European, Romanian, neutral Balkan, Eurasian), each anchored at a real decision point and measured with real proxy countries (Estonia, Latvia, Lithuania; Poland, Slovakia; Romania; Serbia, North Macedonia; Belarus, Armenia). Income is projected by the share of the gap to the EU each proxy closed, shown as a range across proxies and two base years. Each scenario is rated against reality on the same five dimensions as the book, with a separate plausibility score, and can be compared with reality side by side.
@@ -26,10 +24,9 @@ The first version, made from the original prompt, is kept at `first-edition/`.
 
 - `index.html` — the built book (data inlined).
 - `what-if/index.html` — the built "Какво ако?" page.
-- `first-edition/index.html` — the built first version.
-- `src/page.html`, `src/what-if.html`, `src/first-edition.html` — page sources; `__DATA__`, `__PEERS__`, `__REVIEW__` and `__WHATIF__` are replaced at build time.
+- `src/page.html`, `src/what-if.html` — page sources; `__DATA__`, `__PEERS__`, `__REVIEW__` and `__WHATIF__` are replaced at build time.
 - `src/styles.css`, `src/charts.js` — styles and chart code shared by the book and "Какво ако?".
-- `data/data.json` — Bulgaria series (first used by the first version).
+- `data/data.json` — Bulgaria series.
 - `data/peers.json` — cleaned peer-comparison series; `data/peers_raw.json` is the raw API extract (September 2026).
 - `data/whatif.json` — cleaned proxy-country series; `data/whatif_raw.json` is the raw World Bank extract (`scripts/fetch_whatif.py`, `scripts/build_whatif.py`).
 - `data/review.json` — the adversarial review and fact-check log shown on the page.

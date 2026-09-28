@@ -2,7 +2,6 @@
 
 - index.html (the book): src/page.html with data/data.json, data/peers.json and data/review.json inlined.
 - what-if/index.html: src/what-if.html with data/whatif.json inlined.
-- first-edition/index.html (first version): src/first-edition.html with data/data.json inlined.
 
 src/styles.css and src/charts.js are shared by the book and the "Какво ако?" page.
 """
@@ -36,5 +35,4 @@ def write(path, html):
 
 write("index.html", fill("src/page.html", DATA="data/data.json", PEERS="data/peers.json", REVIEW="data/review.json"))
 write("what-if/index.html", fill("src/what-if.html", WHATIF="data/whatif.json"))
-write("first-edition/index.html", fill("src/first-edition.html", DATA="data/data.json"))
-print("wrote index.html, what-if/index.html and first-edition/index.html")
+print("wrote index.html and what-if/index.html")
