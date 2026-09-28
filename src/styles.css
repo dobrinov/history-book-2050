@@ -158,6 +158,11 @@ details.table-view th{color:var(--muted);font-weight:500;position:sticky;top:0;b
 .tip .r{display:flex;gap:8px;align-items:center;justify-content:space-between}
 .tip .r span:first-child{display:inline-flex;gap:6px;align-items:center}
 .tip i{width:8px;height:8px;border-radius:50%;display:inline-block;border:1px solid rgba(255,255,255,.4)}
+.tip.prose{font-family:var(--f-body);font-size:14px;line-height:1.5;max-width:340px;padding:10px 12px}
+.tip.prose .s{display:block;margin-top:6px;font-family:var(--f-mono);font-size:11px;opacity:.72}
+.fact{text-decoration:underline dotted var(--muted);text-decoration-thickness:1px;text-underline-offset:3px;cursor:help}
+.fact:hover{text-decoration-color:var(--ink)}
+.fact:focus-visible{outline:2px solid var(--rose);outline-offset:2px;border-radius:2px}
 
 .pull{font-family:var(--f-display);font-weight:400;font-size:clamp(20px,2.6vw,28px);line-height:1.3;border-top:2px solid var(--ink);border-bottom:1px solid var(--line);padding-block:18px;max-width:34ch}
 .pull .mono{color:var(--rose)}
@@ -375,7 +380,7 @@ table.mx tr.det td{background:var(--paper-2);padding:14px 16px 18px}
 .det-grid .to,.det-grid .rel{grid-column:1/-1}
 @media (max-width:700px){.det-grid{grid-template-columns:1fr}}
 .wbar{display:flex;align-items:center;gap:8px}
-.wbar .b{height:10px;border-radius:2px;background:var(--rose);min-width:1px}
+.wbar .b{height:10px;border-radius:2px;background:var(--good);min-width:1px}
 .wbar .b.neg{background:var(--bad)}
 .wbar .z{width:1px;height:14px;background:var(--ink-2)}
 .idx-note{font-size:14px;color:var(--muted);margin-top:10px;max-width:80ch}

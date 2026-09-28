@@ -11,8 +11,8 @@ const MONTHS = ['яну','фев','мар','апр','май','юни','юли','
 
 /* ---------- tooltip ---------- */
 const tip = $('#tip');
-function showTip(html, x, y){
-  tip.innerHTML = html; tip.hidden = false;
+function showTip(html, x, y, cls=''){
+  tip.className = 'tip' + (cls ? ' '+cls : ''); tip.innerHTML = html; tip.hidden = false;
   const r = tip.getBoundingClientRect();
   let lx = x + 14, ly = y + 14;
   if (lx + r.width > innerWidth - 8) lx = x - r.width - 14;
@@ -20,6 +20,21 @@ function showTip(html, x, y){
   tip.style.left = Math.max(8,lx)+'px'; tip.style.top = Math.max(8,ly)+'px';
 }
 function hideTip(){ tip.hidden = true; }
+
+/* ---------- fact tooltips: <span class="fact" tabindex="0" data-tip="…"> ---------- */
+(function(){
+  let cur = null;
+  const find = e => e.target.closest ? e.target.closest('.fact[data-tip]') : null;
+  const show = f => { cur = f; const r = f.getBoundingClientRect(); tip.setAttribute('role','tooltip'); f.setAttribute('aria-describedby','tip'); showTip(f.dataset.tip, r.left, r.bottom - 8, 'prose'); };
+  const hide = () => { if (!cur) return; cur.removeAttribute('aria-describedby'); cur = null; hideTip(); };
+  document.addEventListener('pointerover', e => { const f = find(e); if (f && e.pointerType === 'mouse') show(f); });
+  document.addEventListener('pointerout', e => { const f = find(e); if (f && f === cur && !f.contains(e.relatedTarget)) hide(); });
+  document.addEventListener('focusin', e => { const f = find(e); if (f) show(f); });
+  document.addEventListener('focusout', e => { if (find(e) === cur) hide(); });
+  document.addEventListener('click', e => { const f = find(e); if (f) { e.stopPropagation(); show(f); } else hide(); }, true);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') hide(); });
+  addEventListener('scroll', hide, {passive: true});
+})();
 
 
 /* ---------- figure scaffold ---------- */
