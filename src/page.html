@@ -1321,9 +1321,9 @@ const EL = [
     if (order==='score') rows.sort((a,b)=>(b.sc??-9)-(a.sc??-9));
     const max = 2;
     tbl.innerHTML = `<thead><tr><th>Правителство</th><th>Период</th>${DIMS.map(d=>`<th class="d">${d.label}<small>мандат · наследство</small></th>`).join('')}<th>Ваш индекс</th><th></th></tr></thead><tbody>${rows.map(({g,i,sc})=>{
-      const w = sc==null?0:Math.abs(sc)/max*70;
+      const w = sc==null?0:Math.min(1,Math.abs(sc)/max)*56;
       return `<tr class="g" data-i="${i}"><td>${g.pm}<small>${g.party}</small></td><td class="num">${g.now?Math.floor(g.from)+'–':Math.floor(g.from)===Math.floor(g.to)?Math.floor(g.from):Math.floor(g.from)+'–'+Math.floor(g.to)}</td>${DIMS.map(d=>`<td class="d">${cell(g.s[d.k][0], g.ct.includes(d.k), d.label+', в мандата')}${cell(g.s[d.k][1], g.ct.includes(d.k), d.label+', наследство')}</td>`).join('')}
-        <td class="num">${sc==null?'<span class="sc" data-v="?">?</span>':`<span class="wbar">${sc<0?`<span class="b neg" style="width:${w}px"></span><span class="z"></span>`:`<span style="width:0"></span><span class="z"></span><span class="b" style="width:${w}px"></span>`}<span>${sgn(sc,2)}</span></span>`}</td>
+        <td class="num">${sc==null?'<span class="sc" data-v="?">?</span>':`<span class="wbar"><span class="h l">${sc<0?`<span class="b neg" style="width:${w}px"></span>`:''}</span><span class="z"></span><span class="h">${sc>0?`<span class="b" style="width:${w}px"></span>`:''}</span><span class="v">${sgn(sc,2)}</span></span>`}</td>
         <td><button class="exp" type="button" aria-expanded="${open.has(i)}" aria-controls="det-${i}">${open.has(i)?'скрий':'защо'}</button></td></tr>
         ${open.has(i)?`<tr class="det" id="det-${i}"><td colspan="${DIMS.length+4}"><div class="det-grid"><div class="for"><h4>Най-силният аргумент „за“</h4>${g.pro}</div><div class="against"><h4>Най-силният аргумент „против“</h4>${g.con}</div><div class="to"><h4>Компромис</h4>${g.tr}${g.ct.length?` <span class="tag contested">спорно: ${g.ct.map(k=>DIMS.find(d=>d.k===k).label.toLowerCase()).join(', ')}</span>`:''}</div></div></td></tr>`:''}`;
     }).join('')}</tbody>`;

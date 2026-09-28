@@ -408,7 +408,10 @@ table.mx tr.det td{background:var(--paper-2);padding:14px 16px 18px}
 .det-grid .for h4{color:var(--good-ink)} .det-grid .against h4{color:var(--bad-ink)} .det-grid .to h4{color:var(--warn-ink)}
 .det-grid .to,.det-grid .rel{grid-column:1/-1}
 @media (max-width:700px){.det-grid{grid-template-columns:1fr}}
-.wbar{display:flex;align-items:center;gap:8px}
+.wbar{display:flex;align-items:center;gap:4px}
+.wbar .h{width:56px;display:flex}
+.wbar .h.l{justify-content:flex-end}
+.wbar .v{margin-left:6px;min-width:5ch;text-align:right}
 .wbar .b{height:10px;border-radius:2px;background:var(--good);min-width:1px}
 .wbar .b.neg{background:var(--bad)}
 .wbar .z{width:1px;height:14px;background:var(--ink-2)}
