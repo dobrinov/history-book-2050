@@ -21,6 +21,18 @@ function showTip(html, x, y, cls=''){
 }
 function hideTip(){ tip.hidden = true; }
 
+/* ---------- sources: each page defines REFS = {key:[title, url]} ---------- */
+const REFN = {}, REFORDER = [];
+const refNum = k => { if (!(k in REFN)) { REFN[k] = REFORDER.length+1; REFORDER.push(k); } return REFN[k]; };
+/* Номерира <sup class="ref"> и добавя източниците към подсказките на <span class="fact" data-r="…">. */
+function linkRefs(root){
+  root.querySelectorAll('sup.ref').forEach(s => { const k = s.dataset.r; if (!REFS[k]) return; const n = refNum(k); s.innerHTML = `<a href="#src-${n}" aria-label="Източник ${n}">${n}</a>`; });
+  root.querySelectorAll('.fact[data-r]').forEach(f => { if (f.dataset.done) return; f.dataset.done = 1; f.dataset.tip += f.dataset.r.split(' ').filter(k=>REFS[k]).map(k=>`<span class="s">[${refNum(k)}] ${REFS[k][0]}</span>`).join(''); });
+}
+function renderBib(el){
+  el.innerHTML = REFORDER.map((k,i) => `<li id="src-${i+1}">${REFS[k][0]}${/[.!?]$/.test(REFS[k][0])?'':'.'} <a href="${REFS[k][1]}" rel="noopener" target="_blank">${decodeURI(REFS[k][1]).replace(/^https?:\/\//,'')}</a></li>`).join('');
+}
+
 /* ---------- fact tooltips: <span class="fact" tabindex="0" data-tip="…"> ---------- */
 (function(){
   let cur = null;
