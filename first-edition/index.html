@@ -1,0 +1,1135 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>България, 1989–2026</title>
+<meta name="description" content="Генерирана от изкуствен интелект история на българския преход 1989–2026, измерена с данни от НСИ и Евростат.">
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://stats.aparatnata.com/js/pa-sUB6-fMB07ajuNd_eKYAP.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#eef0ea; --paper-2:#e4e8e0; --card:#f8f9f5; --ink:#15201c; --ink-2:#3d4a45; --muted:#66736d; --line:#c8cfc6; --line-soft:#dbe0d8;
+  --rose:#a8203f; --rose-soft:#f3dbe1;
+  --mtn-1:#cfd6cc; --mtn-2:#b3bfb3; --mtn-3:#8e9e92; --mtn-4:#5d6f65;
+  --s-blue:#2a78d6; --s-orange:#eb6834; --s-aqua:#1baf7a; --s-red:#e34948; --s-yellow:#eda100; --s-magenta:#e87ba4; --s-violet:#4a3aa7; --s-grey:#9aa39e;
+  --ref:#7c8580;
+  --good:#0ca30c; --warn:#fab219; --bad:#d03b3b; --good-ink:#0a6b1f; --bad-ink:#a42a2a; --warn-ink:#7a5600;
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;
+  --f-body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#101614; --paper-2:#151d1a; --card:#18211e; --ink:#e6ece8; --ink-2:#c3ccc7; --muted:#95a19b; --line:#33403b; --line-soft:#26302c;
+    --rose:#f06d8e; --rose-soft:#3a1d26;
+    --mtn-1:#1b2522; --mtn-2:#22302b; --mtn-3:#2d3e37; --mtn-4:#3c5148;
+    --s-blue:#3987e5; --s-orange:#d95926; --s-aqua:#199e70; --s-red:#e66767; --s-yellow:#c98500; --s-magenta:#d55181; --s-violet:#9085e9; --s-grey:#6f7a75;
+    --ref:#8f9994;
+    --good-ink:#5fd46a; --bad-ink:#ff8c8c; --warn-ink:#f5c451;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#101614; --paper-2:#151d1a; --card:#18211e; --ink:#e6ece8; --ink-2:#c3ccc7; --muted:#95a19b; --line:#33403b; --line-soft:#26302c;
+  --rose:#f06d8e; --rose-soft:#3a1d26;
+  --mtn-1:#1b2522; --mtn-2:#22302b; --mtn-3:#2d3e37; --mtn-4:#3c5148;
+  --s-blue:#3987e5; --s-orange:#d95926; --s-aqua:#199e70; --s-red:#e66767; --s-yellow:#c98500; --s-magenta:#d55181; --s-violet:#9085e9; --s-grey:#6f7a75;
+  --ref:#8f9994;
+  --good-ink:#5fd46a; --bad-ink:#ff8c8c; --warn-ink:#f5c451;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:18px;line-height:1.6;margin:0;overflow-x:clip}
+a{color:var(--rose);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.08;letter-spacing:-.01em}
+p{margin:0}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.wrap{max-width:1120px;margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+.prose{max-width:66ch}
+.prose p+p{margin-top:1em}
+
+/* ---------- sticky chronometer ---------- */
+.chrono{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line-soft)}
+.chrono-in{display:flex;align-items:center;gap:16px;min-height:48px}
+.chrono-year{font-family:var(--f-display);font-weight:800;font-size:22px;font-variant-numeric:tabular-nums;min-width:3.2em;color:var(--rose)}
+.chrono-label{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+.chrono-nav{display:flex;gap:4px}
+.chrono-nav a{font-family:var(--f-mono);font-size:11px;color:var(--muted);text-decoration:none;padding:4px 6px;border-radius:3px}
+.chrono-nav a:hover{color:var(--ink);background:var(--paper-2)}
+.chrono-bar{position:absolute;left:0;bottom:-1px;height:2px;background:var(--rose);width:0}
+@media (max-width:720px){.chrono-nav{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:clip;padding-block:72px 0}
+.hero-kicker{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline}
+.hero h1{font-size:clamp(44px,9vw,112px);font-weight:800;margin-top:20px;letter-spacing:-.03em}
+.hero h1 .cyr{display:block;font-weight:400;font-size:.36em;letter-spacing:.02em;color:var(--rose);margin-top:.35em}
+.hero-lede{font-size:clamp(19px,2.2vw,23px);line-height:1.5;margin-top:28px;max-width:40ch;color:var(--ink-2)}
+.hero-sign{margin-top:22px;font-style:italic;color:var(--muted);font-size:16px}
+.mountains{position:relative;height:clamp(150px,22vw,260px);margin-top:36px;pointer-events:none}
+.mountains svg{position:absolute;left:-2%;width:104%;bottom:0;height:100%;will-change:transform}
+.hero-years{position:absolute;right:clamp(16px,4vw,40px);top:84px;font-family:var(--f-display);font-weight:800;font-size:clamp(28px,5vw,64px);line-height:.95;text-align:right;color:transparent;-webkit-text-stroke:1.2px var(--line);will-change:transform}
+@media (max-width:720px){.hero-years{display:none}}
+
+/* ---------- KPI band ---------- */
+.band{background:var(--mtn-4);color:#f2f5f1;padding-block:44px}
+.band .eyebrow{color:#c9d4cd}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.14);margin-top:20px;border:1px solid rgba(255,255,255,.14)}
+.kpi{background:var(--mtn-4);padding:18px 18px 16px;display:flex;flex-direction:column;gap:6px}
+.kpi-name{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#c9d4cd}
+.kpi-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;font-variant-numeric:tabular-nums}
+.kpi-from{font-family:var(--f-mono);font-size:15px;color:#c9d4cd;text-decoration:line-through;text-decoration-color:rgba(255,255,255,.35)}
+.kpi-to{font-family:var(--f-display);font-weight:600;font-size:28px;line-height:1}
+.kpi-note{font-size:13px;color:#d7e0da;line-height:1.35}
+@media (max-width:900px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){.kpi-to{font-size:24px}}
+
+/* ---------- method ---------- */
+.section{padding-block:80px}
+.section h2{font-size:clamp(28px,4.4vw,48px);font-weight:800}
+.sect-head{display:flex;flex-direction:column;gap:14px;margin-bottom:32px}
+.method-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 32px;margin-top:36px}
+.method-item{border-top:2px solid var(--ink);padding-top:12px;display:flex;flex-direction:column;gap:6px}
+.method-item h3{font-size:15px;font-weight:600;letter-spacing:.01em}
+.method-item p{font-size:15.5px;color:var(--ink-2);line-height:1.5}
+.method-item .src{font-family:var(--f-mono);font-size:11.5px;color:var(--muted)}
+@media (max-width:860px){.method-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.method-grid{grid-template-columns:1fr}}
+.callout{margin-top:36px;padding:18px 20px;border-left:3px solid var(--rose);background:var(--rose-soft);font-size:16px;max-width:78ch}
+
+/* ---------- chapters ---------- */
+.chapter{position:relative;overflow:clip;padding-block:96px 88px;border-top:1px solid var(--line)}
+.chapter:nth-of-type(even){background:var(--paper-2)}
+.bgyear{position:absolute;right:-2vw;top:40px;font-family:var(--f-display);font-weight:800;font-size:clamp(120px,26vw,340px);line-height:.8;color:transparent;-webkit-text-stroke:1.5px var(--line);letter-spacing:-.04em;pointer-events:none;user-select:none;will-change:transform;z-index:0}
+.chapter .wrap{position:relative;z-index:1}
+.ch-grid{display:grid;grid-template-columns:180px minmax(0,1fr);gap:40px}
+.ch-side{display:flex;flex-direction:column;gap:14px;align-self:start;position:sticky;top:80px}
+.ch-num{font-family:var(--f-mono);font-size:13px;color:var(--rose);letter-spacing:.1em}
+.ch-range{font-family:var(--f-display);font-weight:600;font-size:26px;line-height:1.05;font-variant-numeric:tabular-nums}
+.ch-people{display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--ink-2);line-height:1.35}
+.ch-people b{font-weight:600;color:var(--ink)}
+.ch-main{display:flex;flex-direction:column;gap:28px;min-width:0}
+.ch-main h2{font-size:clamp(30px,4.6vw,54px);font-weight:800}
+.ch-sub{font-style:italic;color:var(--ink-2);font-size:20px;margin-top:10px;max-width:52ch}
+@media (max-width:860px){.ch-grid{grid-template-columns:1fr;gap:20px}.ch-side{position:static;flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:8px 18px}.ch-people{flex-direction:row;flex-wrap:wrap;gap:4px 14px}}
+
+.events{list-style:none;padding:0;margin:0;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.events li{position:relative;padding-left:22px;font-size:16.5px;line-height:1.5;max-width:70ch}
+.events li::before{content:"";position:absolute;left:-5px;top:.55em;width:9px;height:9px;border-radius:50%;background:var(--paper);border:2px solid var(--rose)}
+.events time{font-family:var(--f-mono);font-size:12.5px;color:var(--rose);display:block;letter-spacing:.04em}
+
+.ledger{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.ledger>div{background:var(--card);padding:18px 20px;display:flex;flex-direction:column;gap:10px}
+.ledger h3{font-family:var(--f-mono);font-weight:500;font-size:12px;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.ledger ul{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:8px;font-size:15.5px;line-height:1.45}
+.ledger .up h3{color:var(--good-ink)} .ledger .down h3{color:var(--bad-ink)}
+.ledger .up li::marker{color:var(--good)} .ledger .down li::marker{color:var(--bad)}
+.ico{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;font-size:11px;font-family:var(--f-mono);color:#fff;flex:none}
+.ico.good{background:var(--good)} .ico.bad{background:var(--bad)} .ico.warn{background:var(--warn);color:#241a00}
+@media (max-width:640px){.ledger{grid-template-columns:1fr}}
+
+/* ---------- figures (charts) ---------- */
+.fig{background:var(--card);border:1px solid var(--line);padding:18px 18px 12px;display:flex;flex-direction:column;gap:8px}
+.fig-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;align-items:baseline}
+.fig-title{font-family:var(--f-body);font-weight:600;font-size:17px;line-height:1.3}
+.fig-cap{font-size:14px;color:var(--muted);line-height:1.45}
+.fig-src{font-family:var(--f-mono);font-size:11px;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-family:var(--f-mono);font-size:12px;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{display:inline-block;width:14px;height:3px;border-radius:2px}
+.legend i.dash{background:repeating-linear-gradient(90deg,var(--ref) 0 4px,transparent 4px 7px)!important}
+.legend i.sq{width:10px;height:10px;border-radius:2px}
+.chart{position:relative;width:100%;min-height:200px}
+.chart svg{display:block;width:100%;overflow:visible}
+.chart text{font-family:var(--f-mono);font-size:11px;fill:var(--muted)}
+.chart .lbl{fill:var(--ink-2);font-size:11.5px}
+.chart .grid{stroke:var(--line-soft);stroke-width:1}
+.chart .axis{stroke:var(--line);stroke-width:1}
+.chart .band-hl{fill:var(--rose);opacity:.08}
+.chart .band-lbl{fill:var(--rose);font-size:10.5px;letter-spacing:.06em}
+.chart .xh{stroke:var(--ink-2);stroke-width:1;stroke-dasharray:2 3}
+.fig-two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:760px){.fig-two{grid-template-columns:1fr}}
+details.table-view{font-size:13px}
+details.table-view summary{cursor:pointer;font-family:var(--f-mono);font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+details.table-view .tv{overflow-x:auto;max-height:260px;margin-top:8px}
+details.table-view table{border-collapse:collapse;font-family:var(--f-mono);font-size:12px;font-variant-numeric:tabular-nums}
+details.table-view td,details.table-view th{padding:3px 10px;border-bottom:1px solid var(--line-soft);text-align:right;white-space:nowrap}
+details.table-view th{color:var(--muted);font-weight:500;position:sticky;top:0;background:var(--card)}
+
+.tip{position:fixed;z-index:50;pointer-events:none;background:var(--ink);color:var(--paper);font-family:var(--f-mono);font-size:12px;line-height:1.45;padding:8px 10px;border-radius:4px;max-width:280px;box-shadow:0 6px 20px rgba(0,0,0,.18);font-variant-numeric:tabular-nums}
+.tip b{font-weight:500;display:block;margin-bottom:2px;font-size:12.5px}
+.tip .r{display:flex;gap:8px;align-items:center;justify-content:space-between}
+.tip .r span:first-child{display:inline-flex;gap:6px;align-items:center}
+.tip i{width:8px;height:8px;border-radius:50%;display:inline-block;border:1px solid rgba(255,255,255,.4)}
+
+.pull{font-family:var(--f-display);font-weight:400;font-size:clamp(20px,2.6vw,28px);line-height:1.3;border-top:2px solid var(--ink);border-bottom:1px solid var(--line);padding-block:18px;max-width:34ch}
+.pull .mono{color:var(--rose)}
+
+/* ---------- scorecard ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--f-mono);font-size:12px;border:1px solid var(--line);background:var(--card);color:var(--ink-2);padding:6px 11px;border-radius:999px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.chip i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px;vertical-align:0}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);background:var(--card);margin-top:16px}
+table.score{border-collapse:collapse;width:100%;min-width:860px;font-size:14.5px}
+table.score th{font-family:var(--f-mono);font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:12px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+table.score th button{all:unset;cursor:pointer}
+table.score th button:focus-visible{outline:2px solid var(--rose)}
+table.score th[aria-sort] button::after{content:" ↕";opacity:.5}
+table.score th[aria-sort="ascending"] button::after{content:" ↑";opacity:1}
+table.score th[aria-sort="descending"] button::after{content:" ↓";opacity:1}
+table.score td{padding:12px;border-bottom:1px solid var(--line-soft);vertical-align:top;line-height:1.4}
+table.score td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+table.score .pm{font-weight:600}
+table.score .pm small{display:block;font-weight:400;color:var(--muted);font-size:12.5px}
+table.score .fam,table.score .verdict{white-space:normal;align-items:flex-start}
+table.score .fam i,table.score .verdict .ico{margin-top:3px}
+table.score tr:not(.why-row) td{border-bottom:0;padding-bottom:4px}
+table.score .why{font-size:14px;color:var(--ink-2);padding-top:0;padding-bottom:14px;max-width:none}
+table.score .why-lbl{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.fam{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:11.5px;white-space:nowrap}
+.fam i{width:9px;height:9px;border-radius:2px;display:inline-block}
+.verdict{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;white-space:nowrap}
+.pos{color:var(--good-ink)} .neg{color:var(--bad-ink)}
+.ribbon{margin-top:28px}
+
+/* ---------- people ---------- */
+.people{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:20px}
+.person{background:var(--card);border:1px solid var(--line);padding:18px;display:flex;flex-direction:column;gap:10px}
+.person-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.person h3{font-family:var(--f-body);font-size:19px;font-weight:600;line-height:1.2}
+.person .cyr{font-size:13.5px;color:var(--muted);display:block;margin-top:2px;font-weight:400}
+.person .role{font-family:var(--f-mono);font-size:11.5px;color:var(--ink-2);line-height:1.4}
+.person dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 10px;font-size:14px;line-height:1.4}
+.person dt{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+.person dt.g{color:var(--good-ink)} .person dt.b{color:var(--bad-ink)}
+.person dd{margin:0;color:var(--ink-2)}
+.infl{display:flex;gap:3px;align-items:center}
+.infl span{width:10px;height:10px;border-radius:2px;background:var(--line)}
+.infl span.on{background:var(--rose)}
+@media (max-width:900px){.people{grid-template-columns:1fr 1fr}}
+@media (max-width:580px){.people{grid-template-columns:1fr}}
+
+/* ---------- final ledger ---------- */
+.final{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.final h3{font-size:22px;font-weight:600;display:flex;gap:10px;align-items:center}
+.final ol{margin:16px 0 0;padding-left:1.4em;display:flex;flex-direction:column;gap:14px;font-size:16.5px;line-height:1.5}
+.final ol li::marker{font-family:var(--f-mono);font-size:13px;color:var(--muted)}
+.final li b{font-weight:600}
+@media (max-width:760px){.final{grid-template-columns:1fr}}
+.verdict-2050{background:var(--ink);color:var(--paper);padding-block:80px}
+.verdict-2050 h2{font-size:clamp(28px,4vw,46px)}
+.verdict-2050 .prose{font-size:19px;margin-top:24px}
+.verdict-2050 .eyebrow{color:color-mix(in srgb,var(--paper) 65%,transparent)}
+.sources{font-size:14.5px;color:var(--ink-2)}
+.sources ul{padding-left:1.1em;display:flex;flex-direction:column;gap:6px;margin:14px 0 0}
+.sources code{font-family:var(--f-mono);font-size:12.5px}
+footer{padding-block:40px 60px;font-family:var(--f-mono);font-size:12px;color:var(--muted);border-top:1px solid var(--line)}
+
+.ai-pill{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--paper);background:var(--rose);padding:4px 8px;border-radius:3px;text-decoration:none;white-space:nowrap}
+.ai-pill:hover{filter:brightness(1.1)}
+.ai-note{margin-top:26px;display:flex;gap:12px;align-items:flex-start;max-width:62ch;border:1px solid var(--rose);background:var(--rose-soft);padding:12px 14px;font-size:15px;line-height:1.5}
+.ai-note b{font-weight:600}
+.ai-tag{font-family:var(--f-mono);font-size:11px;font-weight:500;letter-spacing:.08em;background:var(--rose);color:var(--paper);padding:3px 7px;border-radius:3px;flex:none;margin-top:2px}
+.prompt-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px;margin-top:8px}
+.prompt-box{background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column}
+.prompt-bar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--line);font-family:var(--f-mono);font-size:11.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.prompt-box pre{margin:0;padding:16px 18px;font-family:var(--f-mono);font-size:13.5px;line-height:1.6;white-space:pre-wrap;word-break:break-word;color:var(--ink)}
+.prompt-box .tr{padding:16px 18px;font-size:15.5px;line-height:1.55;color:var(--ink-2)}
+.copy{font-family:var(--f-mono);font-size:11.5px;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:5px 10px;border-radius:3px;cursor:pointer;text-transform:none;letter-spacing:0}
+.followups{margin-top:22px;display:flex;flex-direction:column;gap:10px;font-size:15px;color:var(--ink-2);max-width:78ch}
+.followups q{font-family:var(--f-mono);font-size:13px;color:var(--ink);quotes:"„" "“"}
+.how{margin-top:22px;font-size:15.5px;color:var(--ink-2);max-width:78ch}
+.how li+li{margin-top:6px}
+@media (max-width:820px){.prompt-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+
+<header class="chrono" aria-label="Позиция в текста">
+  <div class="wrap chrono-in">
+    <span class="chrono-year" id="cy" aria-live="off">1989</span>
+    <span class="chrono-label" id="cl">Пролог · Дългата промяна</span>
+    <nav class="chrono-nav" aria-label="Раздели">
+      <a href="#method">Метод</a><a href="#ch1">1989</a><a href="#ch3">1997</a><a href="#ch6">2007</a><a href="#ch9">2014</a><a href="#ch11">2021</a><a href="#ch12">2026</a><a href="#governments">Оценки</a><a href="#people">Личности</a><a href="#verdict">Присъда</a>
+    </nav>
+    <a class="ai-pill" href="#prompt" title="Тази страница е генерирана от изкуствен интелект. Вижте първоначалния промпт.">Генерирано от ИИ</a>
+  </div>
+  <div class="chrono-bar" id="cb"></div>
+</header>
+
+<main>
+<div class="ai-note" role="note" style="max-width:none;margin:0;border-width:0 0 1px;justify-content:center"><span class="ai-tag">1-ва версия</span><span>Това е <b>първата версия</b> от септември 2026 г., запазена за сравнение. <a href="../">Към актуалната версия →</a></span></div>
+<section class="hero" data-year="1989" data-label="Пролог · Дългата промяна">
+  <div class="wrap">
+    <div class="hero-kicker">
+      <span class="eyebrow">История на настоящето, писана през 2050 г.</span>
+      <span class="eyebrow">Том „Преходът“ · 1989–2026</span>
+    </div>
+    <h1>Дългата промяна<span class="cyr">България · 1989–2026</span></h1>
+    <p class="hero-lede">Трийсет и седем години, които отведоха България от еднопартийна държава до еврозоната. Тази история ги преценява с един-единствен тест: какво се промени в ежедневието на обикновения човек, живеещ в страната.</p>
+    <p class="hero-sign">Данните са от Националния статистически институт (НСИ), Евростат и Световната банка. Превъртете надолу, за да се придвижите във времето.</p>
+    <div class="ai-note" role="note"><span class="ai-tag">ИИ</span><span><b>Този сайт е генериран изцяло от изкуствен интелект</b> (Claude на Anthropic, чрез Claude Code). „Историкът от 2050 г.“ е литературен похват. Числата са реални данни, публикувани до септември 2026 г., но текстът и оценките са машинно написани и може да съдържат грешки. <a href="#prompt">Вижте първоначалния промпт.</a></span></div>
+  </div>
+  <div class="hero-years" data-speed="-0.25" aria-hidden="true">1989<br>↓<br>2026</div>
+  <div class="mountains" aria-hidden="true" id="mtn"></div>
+</section>
+
+<section class="band" data-year="2026" data-label="Тогава и сега · основните числа">
+  <div class="wrap">
+    <div class="eyebrow">Тогава и сега · числата, които очертават книгата</div>
+    <div class="kpis">
+      <div class="kpi"><span class="kpi-name">Население</span><div class="kpi-row"><span class="kpi-from">8,99 млн.</span><span class="kpi-to">6,44 млн.</span></div><span class="kpi-note">От 1 януари 1989 до 1 януари 2025 г. Спад с 28% заради емиграция и ниска раждаемост.</span></div>
+      <div class="kpi"><span class="kpi-name">Потребление на човек</span><div class="kpi-row"><span class="kpi-from">30</span><span class="kpi-to">74</span></div><span class="kpi-note">Фактическо индивидуално потребление по стандарт на покупателната способност (СПС), ЕС = 100. От 1997 до 2024 г.</span></div>
+      <div class="kpi"><span class="kpi-name">БВП на човек</span><div class="kpi-row"><span class="kpi-from">28</span><span class="kpi-to">68</span></div><span class="kpi-note">По СПС, ЕС = 100. От дъното през 1999 г. до 2025 г. (предварителни данни).</span></div>
+      <div class="kpi"><span class="kpi-name">Годишна инфлация</span><div class="kpi-row"><span class="kpi-from">1058%</span><span class="kpi-to">3,5%</span></div><span class="kpi-note">От 1997 г., годината на хиперинфлацията, до 2025 г. (ХИПЦ).</span></div>
+      <div class="kpi"><span class="kpi-name">Безработица</span><div class="kpi-row"><span class="kpi-from">19,9%</span><span class="kpi-to">3,5%</span></div><span class="kpi-note">От върха през 2001 г. до 2025 г. Средното за ЕС през 2025 г. е 6,0%.</span></div>
+      <div class="kpi"><span class="kpi-name">Минимална заплата</span><div class="kpi-row"><span class="kpi-from">31 €</span><span class="kpi-to">620 €</span></div><span class="kpi-note">Месечно, от 1999 до 2026 г. Цените също се покачиха: ценовото равнище стигна от 32% до 57% от средното за ЕС.</span></div>
+      <div class="kpi"><span class="kpi-name">Очаквана продължителност на живота</span><div class="kpi-row"><span class="kpi-from">71,4</span><span class="kpi-to">75,8</span></div><span class="kpi-note">Години при раждане, от 1989 до 2024 г. Все още с 5,7 години под средното за ЕС.</span></div>
+      <div class="kpi"><span class="kpi-name">Детска смъртност</span><div class="kpi-row"><span class="kpi-from">14,4</span><span class="kpi-to">4,5</span></div><span class="kpi-note">Починали на 1000 живородени, 1989 до 2024 г.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="method" data-year="2050" data-label="Метод · как тази книга измерва „доброто“">
+  <div class="wrap">
+    <div class="sect-head">
+      <span class="eyebrow">Метод</span>
+      <h2>Какво се смята за „добро“</h2>
+    </div>
+    <div class="prose">
+      <p>Историците на прехода отдавна спорят за идеология, геополитика и моралната тежест на комунистическото минало. Тази книга оставя тези спорове на заден план. Една политика е добра, ако измеримо е подобрила живота на обикновения жител. Това означава цените, които плаща, работата, която може да намери, доходът, който му остава след сметките, годините, които може да очаква да живее, и шансът децата му да останат в страната.</p>
+      <p>Всяка оценка по-долу се позовава на ключов показател за резултат (KPI) от официалната статистика. Правителствата получават заслуга или вина само за годините, в които реално са управлявали. Външните шокове са назовани там, където те определят числата: финансовата криза от 2008 г., пандемията и енергийната война от 2022 г.</p>
+    </div>
+    <div class="method-grid">
+      <div class="method-item"><h3>Покупателна способност</h3><p>Потребление на човек и медианен доход на домакинство, сравнени със средното за ЕС по стандарт на покупателната способност (СПС).</p><span class="src">Евростат prc_ppp_ind · ilc_di03</span></div>
+      <div class="method-item"><h3>Ценова стабилност</h3><p>Годишната инфлация. Тя изяжда заплатите и спестяванията и удря най-силно пенсионерите.</p><span class="src">Световна банка ИПЦ до 1997 · Евростат ХИПЦ от 1998</span></div>
+      <div class="method-item"><h3>Работа</h3><p>Равнището на безработица, коефициентът на заетост на 20–64-годишните, минималната и средната заплата.</p><span class="src">НСИ · Евростат une_rt_a · lfsi_emp_a · earn_mw_cur</span></div>
+      <div class="method-item"><h3>Бедност и лишения</h3><p>Делът на хората в риск от бедност или социално изключване и на тези, които не могат да си позволят основни неща: отопление, ястие с месо или неочаквана сметка.</p><span class="src">Евростат ilc_peps01 · ilc_mddd11 · ilc_mdsd11</span></div>
+      <div class="method-item"><h3>Здраве</h3><p>Очакваната продължителност на живота и детската смъртност са най-прекият тест дали държавата пази хората си живи.</p><span class="src">Евростат demo_mlexpec · demo_minfind</span></div>
+      <div class="method-item"><h3>Оставане</h3><p>Населението, емиграцията и раждаемостта показват дали хората вярват, че бъдещето им е у дома.</p><span class="src">Евростат demo_pjan · migr_emi2 · Световна банка</span></div>
+    </div>
+    <p class="callout"><b>Бележка за неутралността.</b> Съвпадението във времето не е причинност. Едни правителства наследиха подем, други наследиха руини. Всяка оценка по-долу посочва своите причини, така че читател, който претегля доказателствата различно, може да стигне до друго заключение. Където официалните данни са ревизирани по-късно, както при БВП за 1996 и 1999 г., книгата използва текущия ред и го отбелязва.</p>
+  </div>
+</section>
+
+<!-- ============ ГЛАВИ ============ -->
+<section class="chapter" id="ch1" data-from="1989" data-to="1991" data-label="I · Десети ноември">
+  <div class="bgyear" data-speed="0.35" aria-hidden="true">1989</div>
+  <div class="wrap ch-grid">
+    <aside class="ch-side">
+      <span class="ch-num">ГЛАВА I</span>
+      <span class="ch-range">1989–<br>1991</span>
+      <div class="ch-people"><span><b>Петър Младенов</b> държавен глава</span><span><b>Андрей Луканов</b> премиер, БСП</span><span><b>Димитър Попов</b> премиер, безпартиен</span><span><b>Желю Желев</b> президент</span></div>
+    </aside>
+    <div class="ch-main">
+      <div><h2>Десети ноември</h2><p class="ch-sub">Дворцов преврат сложи край на 35-годишното управление на Тодор Живков. Свободата, която последва, беше истинска. Такъв беше и икономическият срив.</p></div>
+      <div class="prose">
+        <p>Българската революция започна вътре в Политбюро. На 10 ноември 1989 г., ден след падането на Берлинската стена, комунистическата партия отстрани Тодор Живков. Режимът вече беше дискредитиран от т.нар. „Възродителен процес“ – насилствената смяна на имената на българските турци. През лятото на 1989 г. над 300 000 от тях бяха изтласкани през границата към Турция. Това беше първата голяма емиграционна вълна на периода, но не и последната.</p>
+        <p>Самият преход беше договорен на Кръглата маса и мина без кръв. Цената се плати в магазините. СИВ, съветският търговски блок, който купуваше по-голямата част от българския износ, се разпадна. През 1990 г. страната спря плащанията по външния дълг. Когато цените бяха освободени през февруари 1991 г., инфлацията стигна 338%, докато заплатите още се определяха от държавата.</p>
+      </div>
+      <ol class="events">
+        <li><time>10 ное 1989</time>Живков е свален. Петър Младенов поема партията и държавата.</li>
+        <li><time>яну–май 1990</time>Кръгла маса между комунистите (преименувани на БСП) и новия Съюз на демократичните сили (СДС) договаря правилата за многопартийни избори.</li>
+        <li><time>юни 1990</time>Първите свободни избори са спечелени от БСП. Желю Желев, философ дисидент, става президент през август.</li>
+        <li><time>1 фев 1991</time>Цените са либерализирани от коалиционното правителство на Димитър Попов с подкрепата на МВФ.</li>
+        <li><time>12 юли 1991</time>Приета е нова демократична Конституция. Тя е в сила и през 2026 г.</li>
+      </ol>
+      <div class="ledger">
+        <div class="up"><h3><span class="ico good" aria-hidden="true">+</span>Какво се получи</h3><ul><li>Свободата на словото, свободните избори и свободното пътуване дойдоха без насилие.</li><li>Конституцията от 1991 г. създаде парламентарна република, която трае вече 35 години.</li><li>Правата на българските турци бяха възстановени. Движението за права и свободи (ДПС) им даде политически глас.</li></ul></div>
+        <div class="down"><h3><span class="ico bad" aria-hidden="true">−</span>Какво се обърка</h3><ul><li>Производството падна три поредни години (−9,1%, −8,4%, −7,3%).</li><li>Инфлацията от 338% през 1991 г. унищожи спестяванията.</li><li>Започна емиграцията: само през 1989 г. населението намаля с 219 000 души.</li></ul></div>
+      </div>
+      <figure class="fig" style="margin:0" id="f-growth"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="ch2" data-from="1991" data-to="1996" data-label="II · Дивият капитализъм">
+  <div class="bgyear" data-speed="0.35" aria-hidden="true">1992</div>
+  <div class="wrap ch-grid">
+    <aside class="ch-side">
+      <span class="ch-num">ГЛАВА II</span>
+      <span class="ch-range">1991–<br>1996</span>
+      <div class="ch-people"><span><b>Филип Димитров</b> премиер, СДС</span><span><b>Любен Беров</b> премиер, експертен</span><span><b>Жан Виденов</b> премиер, БСП</span><span><b>Ахмед Доган</b> ДПС</span></div>
+    </aside>
+    <div class="ch-main">
+      <div><h2>Дивият капитализъм</h2><p class="ch-sub">Реституция, „кредитни милионери“ и борците. Държавата отслабваше по-бързо, отколкото пазарът успяваше да расте.</p></div>
+      <div class="prose">
+        <p>Първото правителство на СДС с премиер Филип Димитров върна земята и имотите на собствениците отпреди 1944 г. и направи България твърд западен партньор. Тя беше първата държава, признала независимостта на Македония. Кабинетът издържа едва година. Последва експертният кабинет на Любен Беров, съставен с мандата на ДПС, който отлагаше трудните решения.</p>
+        <p>В празнината влязоха „борците“. Бивши спортисти въртяха рекет под формата на „застраховане“, а държавните банки раздаваха кредити на добре свързани „кредитни милионери“, които никога не ги върнаха. За обикновения гражданин средата на 90-те означаваше безработица от 11–16%. Означаваше и спестявания, изядени от инфлацията, и нов речник на рекета. Поземлената реформа ликвидира кооперациите, но не изгради ново земеделие.</p>
+      </div>
+      <ol class="events">
+        <li><time>фев 1991 · 1992</time>Законът за собствеността и ползването на земеделските земи и поправките от 1992 г. започват ликвидацията на ТКЗС.</li>
+        <li><time>яну 1992</time>Желев печели първите преки президентски избори.</li>
+        <li><time>дек 1994</time>БСП печели абсолютно мнозинство. Жан Виденов става най-младият премиер в Европа.</li>
+      </ol>
+      <div class="ledger">
+        <div class="up"><h3><span class="ico good" aria-hidden="true">+</span>Какво се получи</h3><ul><li>Частната собственост и малкият бизнес бяха възстановени. Десетки хиляди семейства си върнаха земя и жилища.</li><li>Инфлацията спадна до 73% през 1993 г. (от 338% през 1991 г.), а през 1994–95 г. се върна скромен растеж.</li></ul></div>
+        <div class="down"><h3><span class="ico bad" aria-hidden="true">−</span>Какво се обърка</h3><ul><li>Безработицата достигна 16,4% през 1993 г.</li><li>Организираната престъпност превзе части от икономиката. Невърнатите банкови кредити подпалиха фитила за 1996 г.</li><li>Земеделското производство се срина, защото кооперациите бяха разтурени по-бързо, отколкото новите собственици можеха да обработват земята.</li></ul></div>
+      </div>
+      <figure class="fig" style="margin:0" id="f-unemp"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="ch3" data-from="1996" data-to="1997" data-label="III · Зимата на хиперинфлацията">
+  <div class="bgyear" data-speed="0.35" aria-hidden="true">1997</div>
+  <div class="wrap ch-grid">
+    <aside class="ch-side">
+      <span class="ch-num">ГЛАВА III</span>
+      <span class="ch-range">1996–<br>1997</span>
+      <div class="ch-people"><span><b>Жан Виденов</b> премиер, БСП</span><span><b>Петър Стоянов</b> президент от яну 1997</span><span><b>Стефан Софиянски</b> служебен премиер</span></div>
+    </aside>
+    <div class="ch-main">
+      <div><h2>Зимата на хиперинфлацията</h2><p class="ch-sub">Най-тежката година за обикновените българи след Втората световна война и повратната точка на целия период.</p></div>
+      <div class="prose">
+        <p>Лошите кредити, паниката по банките и зърнената криза се събраха наведнъж. През 1996 г. фалираха над дузина банки. Опашките за хляб се върнаха. В началото на 1996 г. един долар струваше около 70 лева. През февруари 1997 г. струваше близо 3000. Месечната пенсия спадна до стойността на няколко килограма месо.</p>
+        <p>На 10 януари 1997 г. протестиращи нахлуха в Народното събрание. Последва национална стачка, която принуди БСП да върне мандата за съставяне на правителство. Малко моменти от периода показват толкова ясно как обикновените граждани променят посоката на страната.</p>
+      </div>
+      <div class="pull">Потребителските цени се повишиха с <span class="mono">1058%</span> през 1997 г. Потреблението на човек падна от 44% на 30% от средното за ЕС само за една година.</div>
+      <div class="ledger">
+        <div class="up"><h3><span class="ico good" aria-hidden="true">+</span>Какво се получи</h3><ul><li>Масовият мирен протест наложи предсрочни избори вместо насилие.</li><li>Кризата изгради трайно политическо съгласие за валутен борд и фискална дисциплина.</li></ul></div>
+        <div class="down"><h3><span class="ico bad" aria-hidden="true">−</span>Какво се обърка</h3><ul><li>Спестяванията на цял живот изчезнаха за милиони хора.</li><li>БВП спадна с 14,1% през 1997 г. Детската смъртност се покачи до 17,5 на 1000 – най-високото ниво след 1990 г.</li><li>Доверието в държавата рухна. Емиграцията на младите и образованите се ускори.</li></ul></div>
+      </div>
+      <figure class="fig" style="margin:0" id="f-infl"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="ch4" data-from="1997" data-to="2001" data-label="IV · Валутният борд">
+  <div class="bgyear" data-speed="0.35" aria-hidden="true">1999</div>
+  <div class="wrap ch-grid">
+    <aside class="ch-side">
+      <span class="ch-num">ГЛАВА IV</span>
+      <span class="ch-range">1997–<br>2001</span>
+      <div class="ch-people"><span><b>Иван Костов</b> премиер, СДС</span><span><b>Петър Стоянов</b> президент</span><span><b>Муравей Радев</b> финанси</span></div>
+    </aside>
+    <div class="ch-main">
+      <div><h2>Валутният борд</h2><p class="ch-sub">Правителството на Иван Костов спря инфлацията за месеци. Приватизацията му остави траен спор за това кой спечели.</p></div>
+      <div class="prose">
+        <p>На 1 юли 1997 г. левът беше фиксиран към германската марка чрез валутен борд с подкрепата на МВФ. Централната банка вече не можеше да печата пари, за да финансира държавата. Инфлацията спадна от 1058% до 18,7% през 1998 г. и 2,6% през 1999 г. През 1999 г. левът беше деноминиран: 1000 стари лева станаха 1 нов лев. Същият фиксиран курс доведе България до еврото 28 години по-късно.</p>
+        <p>Цената платиха работните места. Губещите държавни заводи бяха закрити или продадени, често на „свои хора“, и обществото още помни това като „престъпна приватизация“. Безработицата се покачи до 19,9% през 2001 г. Реалните доходи се възстановяваха бавно. Въпреки това правителството започна преговори за членство в ЕС през 2000 г. През април 2001 г. българите най-сетне можеха да пътуват в Шенгенското пространство без визи.</p>
+      </div>
+      <div class="ledger">
+        <div class="up"><h3><span class="ico good" aria-hidden="true">+</span>Какво се получи</h3><ul><li>Инфлацията беше спряна, а заплатите и пенсиите отново имаха стабилна стойност.</li><li>Държавният дълг спадна от 97% от БВП през 1997 г. до 64% през 2001 г.</li><li>Преговорите с ЕС започнаха през 2000 г. Безвизовото пътуване в Шенген започна през 2001 г.</li><li>Здравната реформа от 1998–2000 г. създаде Националната здравноосигурителна каса.</li></ul></div>
+        <div class="down"><h3><span class="ico bad" aria-hidden="true">−</span>Какво се обърка</h3><ul><li>Безработицата достигна 19,9% – най-високото ниво за целия период.</li><li>Непрозрачните приватизационни сделки създадоха класа на политически свързаните собственици.</li><li>Ревизираните национални сметки показват спад на БВП през 1999 г., отчасти заради войната в Косово и загубената балканска търговия.</li></ul></div>
+      </div>
+      <figure class="fig" style="margin:0" id="f-conv"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="ch5" data-from="2001" data-to="2005" data-label="V · Цар в републиката">
+  <div class="bgyear" data-speed="0.35" aria-hidden="true">2004</div>
+  <div class="wrap ch-grid">
+    <aside class="ch-side">
+      <span class="ch-num">ГЛАВА V</span>
+      <span class="ch-range">2001–<br>2005</span>
+      <div class="ch-people"><span><b>Симеон Сакскобургготски</b> премиер, НДСВ</span><span><b>Георги Първанов</b> президент от 2002</span><span><b>Милен Велчев</b> финанси</span></div>
+    </aside>
+    <div class="ch-main">
+      <div><h2>Цар в републиката</h2><p class="ch-sub">Бившият цар дете спечели убедително с обещание за промяна „за 800 дни“. Промяната дойде по-бавно, но дойде.</p></div>
+      <div class="prose">
+        <p>Симеон II беше свален от престола като дете през 1946 г. Той се върна и спечели 120 от 240 места с движение, основано само седмици преди изборите. Това беше първата от „спасителните партии“, които ще определят българската политика. Правителството му, с ДПС като партньор, запази валутния борд и намали дълга. То въведе страната в НАТО и подписа Договора за присъединяване към ЕС.</p>
+        <p>За домакинствата това беше времето, когато животът отново започна да изглежда нормален. Безработицата се сви наполовина – от 19,9% на 10,1%. Дойдоха първите мобилни телефони, хипермаркети и евтини полети. Обещаните 800 дни обаче не стигнаха, а критиците посочваха спорни концесии и липса на резултати срещу корупцията.</p>
+      </div>
+      <ol class="events">
+        <li><time>29 мар 2004</time>България става член на НАТО.</li>
+        <li><time>25 апр 2005</time>Договорът за присъединяване към ЕС е подписан в Люксембург.</li>
+        <li><time>2002</time>Спрени са 1-ви и 2-ри блок на АЕЦ „Козлодуй“ – условие за членство в ЕС. 3-ти и 4-ти блок следват през 2006 г.</li>
+      </ol>
+      <div class="ledger">
+        <div class="up"><h3><span class="ico good" aria-hidden="true">+</span>Какво се получи</h3><ul><li>Безработицата спадна от 19,9% на 10,1%.</li><li>Държавният дълг спадна от 64% на 27% от БВП.</li><li>Членството в НАТО и подписаният договор с ЕС направиха западния път необратим.</li></ul></div>
+        <div class="down"><h3><span class="ico bad" aria-hidden="true">−</span>Какво се обърка</h3><ul><li>Реалните доходи продължаваха да изостават. Потреблението на човек беше едва 42% от средното за ЕС през 2005 г.</li><li>Корупцията по високите етажи остана почти ненаказана.</li><li>Разочарованието роди модел на все нови „месиански“ партии.</li></ul></div>
+      </div>
+      <figure class="fig" style="margin:0" id="f-debt"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="ch6" data-from="2005" data-to="2009" data-label="VI · Най-сетне в Европа">
+  <div class="bgyear" data-speed="0.35" aria-hidden="true">2007</div>
+  <div class="wrap ch-grid">
+    <aside class="ch-side">
+      <span class="ch-num">ГЛАВА VI</span>
+      <span class="ch-range">2005–<br>2009</span>
+      <div class="ch-people"><span><b>Сергей Станишев</b> премиер, БСП</span><span><b>Георги Първанов</b> президент</span><span><b>Пламен Орешарски</b> финанси</span></div>
+    </aside>
+    <div class="ch-main">
+      <div><h2>Най-сетне в Европа</h2><p class="ch-sub">Членство в ЕС, плосък данък и най-бързият растеж за периода. После – първото спиране на европейски пари заради корупция.</p></div>
+      <div class="prose">
+        <p>„Тройната коалиция“ на БСП, НДСВ и ДПС с премиер Сергей Станишев въведе България в Европейския съюз на 1 януари 2007 г. През 2008 г. последва 10% плосък данък върху доходите. Чуждият капитал нахлу, особено в имотите. Растежът беше средно над 6%, а безработицата спадна до 5,6% през 2008 г. Много семейства купиха първата си кола или жилище на кредит именно тогава.</p>
+        <p>Подемът имаше и тъмна страна. През 2008 г. Европейската комисия спря стотици милиони евро предприсъединителни средства заради измами и конфликт на интереси, а част от тях бяха загубени завинаги. Инфлацията стигна 12%. Газовата криза през януари 2009 г. остави домове и болници без руски газ за близо две седмици. А членството в ЕС направи емиграцията много по-лесна.</p>
+      </div>
+      <div class="ledger">
+        <div class="up"><h3><span class="ico good" aria-hidden="true">+</span>Какво се получи</h3><ul><li>Членството в ЕС донесе свободно движение, структурни фондове и европейски правни стандарти.</li><li>Безработицата спадна до 5,6%, а заетостта се покачи до 68% до 2009 г.</li><li>Тежките материални лишения спаднаха от 58% (2006) на 41% (2008).</li></ul></div>
+        <div class="down"><h3><span class="ico bad" aria-hidden="true">−</span>Какво се обърка</h3><ul><li>Средствата от ЕС бяха замразени през 2008 г. – първата подобна санкция срещу държава членка заради корупция.</li><li>Кредитният и имотният балон се спука през 2009 г.</li><li>Инфлацията достигна 12% през 2008 г. Населението продължаваше да намалява с около 55 000 души годишно.</li></ul></div>
+      </div>
+      <figure class="fig" style="margin:0" id="f-pop"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="ch7" data-from="2009" data-to="2013" data-label="VII · Строги икономии и сметките за ток">
+  <div class="bgyear" data-speed="0.35" aria-hidden="true">2013</div>
+  <div class="wrap ch-grid">
+    <aside class="ch-side">
+      <span class="ch-num">ГЛАВА VII</span>
+      <span class="ch-range">2009–<br>2013</span>
+      <div class="ch-people"><span><b>Бойко Борисов</b> премиер, ГЕРБ</span><span><b>Симеон Дянков</b> финанси</span><span><b>Росен Плевнелиев</b> президент от 2012</span></div>
+    </aside>
+    <div class="ch-main">
+      <div><h2>Строги икономии и сметките за ток</h2><p class="ch-sub">Бивш бодигард и кмет на София преведе страната през кризата в еврозоната с нисък дълг. Протестите дойдоха заради месечните сметки.</p></div>
+      <div class="prose">
+        <p>ГЕРБ на Бойко Борисов спечели с антикорупционно послание през юли 2009 г. и управлява през световната финансова криза. Правителството замрази заплатите в бюджетния сектор и пенсиите, задържа дефицита и дълга сред най-ниските в ЕС и ускори пътищата с европейски пари. Магистрала „Тракия“, планирана още през 70-те години, беше завършена през 2013 г.</p>
+        <p>За домакинствата това бяха гладни години. Безработицата се удвои до 13,9%. Минималната заплата беше замразена на 123 € за три години. През февруари 2013 г. зимните сметки за ток, които изяждаха една трета от много пенсии, предизвикаха протести в цялата страна, включително няколко самозапалвания. Борисов подаде оставка на 20 февруари.</p>
+      </div>
+      <div class="ledger">
+        <div class="up"><h3><span class="ico good" aria-hidden="true">+</span>Какво се получи</h3><ul><li>Публичните финанси останаха стабилни с дълг от 13–17% от БВП. България избегна спасителните програми, наложени на Гърция.</li><li>Усвояването на европейски средства се подобри и магистралите бяха завършени.</li><li>Потреблението на човек все пак се покачи от 44% на 51% от средното за ЕС.</li></ul></div>
+        <div class="down"><h3><span class="ico bad" aria-hidden="true">−</span>Какво се обърка</h3><ul><li>Безработицата се покачи от 6,8% на 13,9%.</li><li>Минималната заплата беше замразена през 2009–2011 г. Почти половината от населението беше в риск от бедност или изключване.</li><li>Цените на енергията и монополите станаха най-взривоопасната тема в политиката.</li></ul></div>
+      </div>
+      <figure class="fig" style="margin:0" id="f-wage"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="ch8" data-from="2013" data-to="2014" data-label="VIII · #ДАНСwithme и банката, която изчезна">
+  <div class="bgyear" data-speed="0.35" aria-hidden="true">2014</div>
+  <div class="wrap ch-grid">
+    <aside class="ch-side">
+      <span class="ch-num">ГЛАВА VIII</span>
+      <span class="ch-range">2013–<br>2014</span>
+      <div class="ch-people"><span><b>Пламен Орешарски</b> премиер, БСП–ДПС</span><span><b>Делян Пеевски</b> депутат от ДПС</span><span><b>Лютви Местан</b> лидер на ДПС</span></div>
+    </aside>
+    <div class="ch-main">
+      <div><h2>#ДАНСwithme и банката, която изчезна</h2><p class="ch-sub">Едно назначение доведе до година протести, а един банков фалит замрази спестяванията на 200 000 вложители.</p></div>
+      <div class="prose">
+        <p>На 14 юни 2013 г. новото правителство на БСП и ДПС, зависимо от националистическата „Атака“, назначи 32-годишния медиен собственик Делян Пеевски за председател на Държавна агенция „Национална сигурност“ (ДАНС). Назначението беше оттеглено до дни. Въпреки това ежедневните протести под хаштага <i>#ДАНСwithme</i> продължиха повече от година. Това беше най-голямата гражданска мобилизация след 1997 г., водена от нова градска средна класа.</p>
+        <p>През юни 2014 г. Корпоративна търговска банка (КТБ), четвъртата по големина в страната, фалира след паника сред вложителите. В нея бяха парите на държавни дружества и тя беше тясно свързана с властта. Гарантираните вложители чакаха до декември, за да получат парите си. Държавата взе заем, за да покрие дупката, и дългът скочи от 17% на 27% от БВП.</p>
+      </div>
+      <div class="ledger">
+        <div class="up"><h3><span class="ico good" aria-hidden="true">+</span>Какво се получи</h3><ul><li>Гражданското общество доказа, че може да търси отговорност от властта.</li><li>Минималната заплата беше размразена и се покачи от 159 € на 174 €.</li></ul></div>
+        <div class="down"><h3><span class="ico bad" aria-hidden="true">−</span>Какво се обърка</h3><ul><li>Фалитът на КТБ струва на данъкоплатците милиарди левове. Години наред никой не беше осъден.</li><li>Дефицитът достигна 5,4% от БВП през 2014 г. – най-лошият резултат в ерата на ЕС.</li><li>Името „Пеевски“ стана синоним на завладяната държава.</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="ch9" data-from="2014" data-to="2021" data-label="IX · Десетилетието на Борисов">
+  <div class="bgyear" data-speed="0.35" aria-hidden="true">2018</div>
+  <div class="wrap ch-grid">
+    <aside class="ch-side">
+      <span class="ch-num">ГЛАВА IX</span>
+      <span class="ch-range">2014–<br>2021</span>
+      <div class="ch-people"><span><b>Бойко Борисов</b> премиер, ГЕРБ (2-ри и 3-ти кабинет)</span><span><b>Румен Радев</b> президент от 2017</span><span><b>Владислав Горанов</b> финанси</span></div>
+    </aside>
+    <div class="ch-main">
+      <div><h2>Десетилетието на Борисов</h2><p class="ch-sub">По числата – най-добрите години за средното домакинство. По върховенството на закона – сред най-лошите в ЕС.</p></div>
+      <div class="prose">
+        <p>Вторият и третият кабинет на Борисов управляваха с Реформаторския блок, а по-късно с националистите от „Обединени патриоти“. Те съвпаднаха със стабилен растеж от 3–4% годишно и почти непрекъснато повишаване на жизнения стандарт. Безработицата спадна от 12,4% на 5,2%. Минималната заплата се увеличи повече от два пъти – от 174 € на 312 €. Делът на хората в риск от бедност или изключване спадна от 40% на 32%. През 2018 г. България председателства Съвета на ЕС. През юли 2020 г. влезе в ERM II, „чакалнята“ на еврото.</p>
+        <p>През същите години България беше последна в ЕС по свобода на медиите (111-о място в света през 2018 г.) и на дъното по възприятие за корупция. Лятото на 2020 г. донесе месеци протести срещу Борисов и главния прокурор Иван Гешев. Те започнаха, когато активисти акостираха на плаж, незаконно ограден за основателя на ДПС Ахмед Доган. След това пандемията оголи слабата здравна система и България завърши 2021 г. с най-ниския дял ваксинирани в ЕС.</p>
+      </div>
+      <div class="ledger">
+        <div class="up"><h3><span class="ico good" aria-hidden="true">+</span>Какво се получи</h3><ul><li>Безработицата спадна от 12,4% на 5,2% (2014–2019), а заетостта се покачи от 64% на 74%.</li><li>Тежките материални лишения намаляха наполовина – от 33% на 19%.</li><li>Влизането в ERM II през 2020 г. очерта ясен път към еврото.</li></ul></div>
+        <div class="down"><h3><span class="ico bad" aria-hidden="true">−</span>Какво се обърка</h3><ul><li>Неравенството стана най-високото в ЕС – коефициент на Джини 40,8 през 2019 г.</li><li>Емиграцията надхвърляше 30 000 души годишно през 2016–2019 г.</li><li>Завладяната прокуратура, концентрацията на медиите и скандалите „Къщи за гости“ и „Апартаментгейт“ подкопаха доверието.</li></ul></div>
+      </div>
+      <figure class="fig" style="margin:0" id="f-pov"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="ch10" data-from="2020" data-to="2021" data-label="X · Пандемията">
+  <div class="bgyear" data-speed="0.35" aria-hidden="true">2021</div>
+  <div class="wrap ch-grid">
+    <aside class="ch-side">
+      <span class="ch-num">ГЛАВА X</span>
+      <span class="ch-range">2020–<br>2021</span>
+      <div class="ch-people"><span><b>Бойко Борисов</b> премиер до май 2021</span><span><b>Стефан Янев</b> служебен премиер</span><span><b>Костадин Ангелов</b> здравеопазване</span></div>
+    </aside>
+    <div class="ch-main">
+      <div><h2>Пандемията</h2><p class="ch-sub">Най-смъртоносният шок за периода. Той удари колкото чрез вируса, толкова и чрез недоверието.</p></div>
+      <div class="prose">
+        <p>Очакваната продължителност на живота спадна от 74,8 години през 2019 г. на 71,2 през 2021 г. Така за две години бяха изтрити почти двадесет години напредък – един от най-стръмните спадове в Европа. Болниците бяха претоварени, а три политически кризи през 2021 г. оставиха страната без стабилно правителство. До края на годината по-малко от една трета от възрастните бяха напълно ваксинирани – най-ниският дял в ЕС. Причината беше дълбокото недоверие към институциите и порой от дезинформация.</p>
+        <p>Икономиката издържа по-добре от общественото здраве. Мерки за запазване на заетостта като „60/40“ и допълнителна месечна добавка към пенсиите омекотиха удара върху доходите. Безработицата се покачи само до 6,1%, а БВП се възстанови със 7,8% през 2021 г.</p>
+      </div>
+      <div class="ledger">
+        <div class="up"><h3><span class="ico good" aria-hidden="true">+</span>Какво се получи</h3><ul><li>Подкрепата за запазване на работните места задържа безработицата ниска.</li><li>Добавките към пенсиите защитиха доходите на възрастните хора.</li><li>Продължителността на живота се възстанови до 75,7 години през 2023 г.</li></ul></div>
+        <div class="down"><h3><span class="ico bad" aria-hidden="true">−</span>Какво се обърка</h3><ul><li>България имаше една от най-високите свръхсмъртности в ЕС.</li><li>Най-ниският дял ваксинирани в ЕС отрази срив на доверието.</li></ul></div>
+      </div>
+      <figure class="fig" style="margin:0" id="f-health"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="ch11" data-from="2021" data-to="2025" data-label="XI · Седем избора за четири години">
+  <div class="bgyear" data-speed="0.35" aria-hidden="true">2022</div>
+  <div class="wrap ch-grid">
+    <aside class="ch-side">
+      <span class="ch-num">ГЛАВА XI</span>
+      <span class="ch-range">2021–<br>2025</span>
+      <div class="ch-people"><span><b>Кирил Петков</b> премиер, ПП</span><span><b>Николай Денков</b> премиер, ПП–ДБ</span><span><b>Росен Желязков</b> премиер, ГЕРБ</span><span><b>Гълъб Донев · Димитър Главчев</b> служебни премиери</span></div>
+    </aside>
+    <div class="ch-main">
+      <div><h2>Седем избора за четири години</h2><p class="ch-sub">Антикорупционните партии пробиха, но не успяха да задържат властта. Междувременно държавата тихо доведе страната до Шенген и еврото.</p></div>
+      <div class="prose">
+        <p>Изборите през април 2021 г. сложиха край на десетилетието на Борисов, но не дадоха мнозинство. Така започна криза със седем предсрочни избора. Партията на певеца и телевизионен водещ Слави Трифонов, ИТН, излезе първа през юли 2021 г. Двама министри от служебния кабинет с образование от Харвард, Кирил Петков и Асен Василев, спечелиха през ноември с „Продължаваме промяната“ (ПП). Коалицията им издържа седем месеца. За това време тя сложи край на зависимостта от газа на „Газпром“, който Русия спря през април 2022 г., а през юни падна с вот на недоверие.</p>
+        <p>Междувременно крайнодясното и проруско „Възраждане“ израсна от нула до 38 депутати. Инфлацията достигна 13% през 2022 г., най-високо при храните и енергията. Ротационното споразумение между ПП–ДБ и ГЕРБ с премиер Николай Денков донесе влизане в Шенген по въздух и море през март 2024 г. и пълно членство през януари 2025 г. Кабинетът на Росен Желязков, воден от ГЕРБ и подкрепян отвън от „ДПС–Ново начало“ на Пеевски, осигури еврото през юли 2025 г. Бюджетът му за 2026 г., който повишаваше осигуровките, предизвика най-големите протести от едно поколение насам. Правителството подаде оставка на 11 декември 2025 г.</p>
+      </div>
+      <div class="ledger">
+        <div class="up"><h3><span class="ico good" aria-hidden="true">+</span>Какво се получи</h3><ul><li>Членството в Шенген през 2024–25 г. сложи край на опашките по границите за пътници и шофьори на камиони.</li><li>Доставките на газ бяха диверсифицирани извън „Газпром“.</li><li>Минималната заплата се покачи от 332 € на 551 €, а безработицата спадна до 3,5%.</li><li>Делът в риск от бедност или изключване спадна до 29% през 2025 г. – най-ниското ниво, регистрирано досега.</li></ul></div>
+        <div class="down"><h3><span class="ico bad" aria-hidden="true">−</span>Какво се обърка</h3><ul><li>Седемте избора и дългите служебни управления замразиха реформите и усвояването на средствата по Плана за възстановяване.</li><li>Инфлацията от 13% през 2022 г. удари най-силно храните и енергията – разходите, които тежат най-много на по-бедните домакинства.</li><li>Купуването на гласове, дезинформацията и растящото влияние на Пеевски задълбочиха недоверието.</li></ul></div>
+      </div>
+      <figure class="fig" style="margin:0" id="f-seats"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="ch12" data-from="2026" data-to="2026" data-label="XII · Еврото и убедителната победа">
+  <div class="bgyear" data-speed="0.35" aria-hidden="true">2026</div>
+  <div class="wrap ch-grid">
+    <aside class="ch-side">
+      <span class="ch-num">ГЛАВА XII</span>
+      <span class="ch-range">2026</span>
+      <div class="ch-people"><span><b>Румен Радев</b> премиер, „Прогресивна България“</span><span><b>Илияна Йотова</b> президент</span><span><b>Андрей Гюров</b> служебен премиер</span><span><b>Гълъб Донев</b> финанси</span></div>
+    </aside>
+    <div class="ch-main">
+      <div><h2>Еврото и убедителната победа</h2><p class="ch-sub">Годината, в която левът изчезна, един президент стана премиер, а наследницата на комунистическата партия отпадна от парламента.</p></div>
+      <div class="prose">
+        <p>На 1 януари 2026 г. България стана 21-вият член на еврозоната при курс 1,95583 лева за евро. Това беше същият курс, който валутният борд фиксира през 1997 г. спрямо германската марка. Минималната заплата стана 620 €. Страхът от поскъпване доминираше при смяната на валутата, както в Хърватия три години по-рано.</p>
+        <p>Румен Радев беше президент от 2017 г. През януари 2026 г. той подаде оставка, за да основе „Прогресивна България“, и вицепрезидентът Илияна Йотова го наследи. На 19 април коалицията му спечели 44% от гласовете и абсолютно мнозинство от 131 места – първото еднопартийно мнозинство от 1997 г. насам. ГЕРБ падна до 39 места. БСП, наследницата на комунистическата партия, остана извън парламента за първи път от 1990 г. Коментаторите спореха дали победата е мандат срещу олигархията, или завой към Москва. Кабинетът „Радев“ встъпи в длъжност на 8 май 2026 г.</p>
+      </div>
+      <div class="callout" style="margin-top:0"><b>Защо книгата спира тук.</b> Ефектът от правителството на Радев върху показателите не може да се прецени по данните от 2026 г. Неговата равносметка принадлежи на следващия том.</div>
+      <figure class="fig" style="margin:0" id="f-income"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ПРАВИТЕЛСТВА ============ -->
+<section class="section" id="governments" data-year="2026" data-label="Оценки · всяко избрано правителство, измерено">
+  <div class="wrap">
+    <div class="sect-head">
+      <span class="eyebrow">Правителствата, оценени</span>
+      <h2>Кой направи живота по-добър?</h2>
+      <p class="prose" style="color:var(--ink-2)">Всеки избран кабинет е измерен за годините, в които е управлявал. Периодът започва с последната пълна година преди встъпването му и завършва с последната му пълна година на власт. Промяната в реалния БВП е кумулативна. Безработицата и жизненият стандарт са показани като промяна. Инфлацията е средногодишна. Присъдата претегля тези числа спрямо условията, които правителството е наследило. Служебните кабинети не са включени, защото са управлявали месеци, а не години. Кликнете върху колона, за да я сортирате.</p>
+    </div>
+    <div class="chips" role="group" aria-label="Филтър по присъда">
+      <button class="chip" data-v="all" aria-pressed="true">Всички</button>
+      <button class="chip" data-v="good" aria-pressed="false"><i style="background:var(--good)"></i>Подобри живота</button>
+      <button class="chip" data-v="mixed" aria-pressed="false"><i style="background:var(--warn)"></i>Смесено</button>
+      <button class="chip" data-v="bad" aria-pressed="false"><i style="background:var(--bad)"></i>Влоши живота</button>
+    </div>
+    <div class="tablewrap"><table class="score" id="score"></table></div>
+    <figure class="fig ribbon" id="f-ribbon" style="margin-inline:0"></figure>
+  </div>
+</section>
+
+<!-- ============ ЛИЧНОСТИ ============ -->
+<section class="section" id="people" style="background:var(--paper-2);border-top:1px solid var(--line)" data-year="2026" data-label="Личности · хората, които оформиха периода">
+  <div class="wrap">
+    <div class="sect-head">
+      <span class="eyebrow">Действащи лица</span>
+      <h2>Хората, които го оформиха</h2>
+      <p class="prose" style="color:var(--ink-2)">Портретите обхващат премиери, президенти и хора с реално влияние. За всеки е посочено какво направи за ежедневието и за какво го критикуват. Квадратчетата оценяват влиянието му върху периода като цяло от 1 до 5. Оценката е на автора, т.е. на изкуствения интелект.</p>
+    </div>
+    <div class="chips" role="group" aria-label="Филтър по политическо семейство" id="pchips"></div>
+    <div class="people" id="plist"></div>
+  </div>
+</section>
+
+<!-- ============ БАЛАНС ============ -->
+<section class="section" id="ledger" data-year="2026" data-label="Балансът · какво се получи и какво се обърка">
+  <div class="wrap">
+    <div class="sect-head"><span class="eyebrow">Балансът</span><h2>Какво се получи и какво се обърка</h2></div>
+    <div class="final">
+      <div>
+        <h3 style="color:var(--good-ink)"><span class="ico good" aria-hidden="true">+</span>Получи се</h3>
+        <ol>
+          <li><b>Пари, които запазват стойността си.</b> Валутният борд от 1997 г. сложи край на хиперинфлацията и 28 години по-късно се превърна в еврото.</li>
+          <li><b>Реално догонване.</b> Потреблението на човек се покачи от 30% на 74% от средното за ЕС, а медианният доход – от 40% на 66%.</li>
+          <li><b>Работа.</b> Безработицата спадна от 19,9% на 3,5% и е под средното за ЕС от 2015 г. насам.</li>
+          <li><b>Свобода на движение.</b> Безвизово пътуване от 2001 г., членство в ЕС от 2007 г., отворени трудови пазари от 2014 г. и Шенген от 2025 г.</li>
+          <li><b>Фискална предпазливост.</b> С около 24% от БВП държавният дълг е сред най-ниските в ЕС вече две десетилетия.</li>
+          <li><b>Оцеляването на децата.</b> Детската смъртност спадна с две трети.</li>
+          <li><b>Гражданска сила.</b> Уличните протести през 1997, 2013, 2020 и 2025 г. смениха правителства без кръвопролития.</li>
+        </ol>
+      </div>
+      <div>
+        <h3 style="color:var(--bad-ink)"><span class="ico bad" aria-hidden="true">−</span>Обърка се</h3>
+        <ol>
+          <li><b>Изгубените 2,5 милиона.</b> Населението намаля с 28% – най-стръмният спад в мирно време в съвременна Европа.</li>
+          <li><b>Изгубеното десетилетие 1989–1999.</b> Производството не се върна на нивото от 1989 г. до средата на 2000-те.</li>
+          <li><b>Неравенство.</b> Коефициентът на Джини, близо 40, е най-високият в ЕС. Растежът стигна до София много по-бързо, отколкото до Северозапада.</li>
+          <li><b>Здраве.</b> Продължителността на живота все още е с около шест години под средната за ЕС.</li>
+          <li><b>Завладяна държава.</b> Лошите кредити от 90-те, замразените средства от ЕС през 2008 г. и КТБ през 2014 г. така и не получиха пълен отговор в съда.</li>
+          <li><b>Нестабилност.</b> България смени 29 кабинета за 37 години, от които седем избора само в периода 2021–2024 г.</li>
+          <li><b>Доверие.</b> Най-ниският дял ваксинирани в ЕС през 2021 г. беше симптом на срива в доверието към институциите.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="verdict-2050" id="verdict" data-year="2050" data-label="Присъда · погледът от 2050 г.">
+  <div class="wrap">
+    <span class="eyebrow">Погледът от 2050 г.</span>
+    <h2 style="margin-top:14px">Успешен преход, платен от хората, които заминаха</h2>
+    <div class="prose">
+      <p>Съден по ежедневието на хората, които останаха, българският преход е успешен. През 2026 г. един пенсионер има стабилни пари, отворени граници и доход и потребление, които спрямо Европа са около два и половина пъти по-високи, отколкото през 1997 г. Решаващите решения бяха малко и често непопулярни. Това са валутният борд от 1997 г., пътят към НАТО и ЕС, избран през 2001–2007 г., и фискалната сдържаност, спазвана от правителства от всички цветове.</p>
+      <p>Съдени по оцеляването на нацията, същите години са демографска катастрофа. Държавата не успя да изгради съдилища и здравеопазване, на които гражданите да вярват. Този провал, повече от който и да е отделен лидер, обяснява защо толкова много хора гласуваха с краката си и защо толкова „спасителни“ партии се издигнаха и паднаха. Периодът завършва така, както започна: с външен човек, който обещава да разбие утвърдената система. Дали 2026 г. е ново начало, или поредно завъртане на цикъла, е въпрос за следващия том.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ПРОМПТ ============ -->
+<section class="section" id="prompt" data-year="2026" data-label="Как е създаден сайтът · първоначалният промпт">
+  <div class="wrap">
+    <div class="sect-head">
+      <span class="eyebrow">Как е създаден този сайт</span>
+      <h2>Генерирано от изкуствен интелект</h2>
+      <p class="prose" style="color:var(--ink-2)">Всичко на тази страница – проучването, текстът, оценките, графиките и кодът – е създадено от езиковия модел Claude на Anthropic, работещ в Claude Code. Моделът е събрал данните сам чрез браузър (инструментът agent-browser) от API-тата на Евростат и Световната банка и от сайта на НСИ. Човек е задал заданието по-долу и е прегледал резултата, но не е писал текста. Третирайте оценките като аргументирано мнение, а не като академичен консенсус.</p>
+    </div>
+    <div class="prompt-grid">
+      <div class="prompt-box">
+        <div class="prompt-bar"><span>Първоначалният промпт · на английски, с поправени правописни и граматически грешки</span><button class="copy" id="copy-prompt" type="button">Копирай</button></div>
+        <pre id="prompt-text">Imagine that you are a historian in 2050 who is writing a history book about Bulgaria between 1989 and 2026. Use agent-browser core (bash) to do research and build a static, interactive HTML page that works as an infographic of the history of Bulgaria between 1989 and 2026: what went well, what went badly, which politicians made good changes for Bulgaria and which made bad ones. Try to be as neutral as possible. Use real KPIs to define what "good" is. In my opinion, good is something that affects the everyday life of a person living in the country. Use websites such as https://www.nsi.bg/ and Eurostat for evidence and charts. Outline major figures, parties, their influence and everything else that comes to mind. Make the page a long, scrollable timeline. It would be nice if it worked with a parallax effect.</pre>
+      </div>
+      <div class="prompt-box">
+        <div class="prompt-bar"><span>Превод на български</span></div>
+        <div class="tr">Представи си, че си историк през 2050 г., който пише книга за историята на България между 1989 и 2026 г. Използвай agent-browser core (bash), за да направиш проучване, и създай статична интерактивна HTML страница, която работи като инфографика на историята на България между 1989 и 2026 г. Какво беше добро и какво лошо. Кои политици направиха добри промени за България и кои лоши. Опитай се да бъдеш максимално неутрален. Използвай реални KPI, за да определиш какво е „добро“. Според мен добро е нещо, което засяга ежедневието на човек, живеещ в страната. Използвай сайтове като https://www.nsi.bg/ и Евростат за доказателства и графики. Очертай основните личности, партии, влияние и всичко, което ти хрумне. Направи страницата като дълга времева линия за превъртане. Ще е хубаво да работи с паралакс ефект.</div>
+      </div>
+    </div>
+    <div class="followups">
+      <span><b>Последващи указания от потребителя:</b></span>
+      <span><q>When done push everything here https://github.com/dobrinov/history-book-2050</q> – качване на кода в GitHub.</span>
+      <span><q>The website should be in bulgarian. Make it clear that it is AI generated and show the initial prompt somewhere.</q> – превод на български, ясно обозначение, че сайтът е генериран от ИИ, и показване на този промпт.</span>
+    </div>
+    <ul class="how">
+      <li>Данните са извлечени през септември 2026 г. Рамката „историк от 2050 г.“ е литературна: страницата не съдържа и не предполага събития след 2026 г.</li>
+      <li>Изходният код и суровите данни са публични: <a href="https://github.com/dobrinov/history-book-2050" rel="noopener" target="_blank">github.com/dobrinov/history-book-2050</a>.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section sources" id="sources" data-year="2050" data-label="Източници и бележки">
+  <div class="wrap">
+    <div class="sect-head"><span class="eyebrow">Източници и бележки</span></div>
+    <div class="prose">
+      <p>Данните са изтеглени през септември 2026 г. от официални API-та и публикации. Стойностите за 2025 г. са предварителни там, където източникът ги отбелязва така.</p>
+      <ul>
+        <li><b>Евростат</b> (<a href="https://ec.europa.eu/eurostat" rel="noopener" target="_blank">ec.europa.eu/eurostat</a>): <code>prc_ppp_ind</code>, <code>tec00114</code>, <code>nama_10_gdp</code>, <code>prc_hicp_aind</code>, <code>une_rt_a</code>, <code>lfsi_emp_a</code>, <code>earn_mw_cur</code>, <code>ilc_peps01</code>, <code>ilc_peps01n</code>, <code>ilc_mddd11</code>, <code>ilc_mdsd11</code>, <code>ilc_di03</code>, <code>ilc_di12</code>, <code>demo_pjan</code>, <code>demo_mlexpec</code>, <code>demo_minfind</code>, <code>migr_emi2</code>, <code>gov_10dd_edpt1</code>, <code>edat_lfse_03</code>, <code>edat_lfse_14</code>.</li>
+        <li><b>НСИ</b> (<a href="https://www.nsi.bg/" rel="noopener" target="_blank">nsi.bg</a>): средна брутна месечна заплата и съотношение минимална/средна заплата, 2013–2024 г. Също основните показатели за 2026 г.</li>
+        <li><b>Световна банка</b>, World Development Indicators: инфлация (ИПЦ) 1989–1997 г., безработица по модела на МОТ 1991–2008 г., потребители на интернет и раждаемост.</li>
+        <li><b>Изборни резултати</b>: Централна избирателна комисия, по данни, обобщени в Уикипедия. Мандатите са след окончателното разпределение, включително след преброяването от 2025 г.</li>
+        <li><b>Бележки.</b> Показателят за риск от бедност или социално изключване смени дефиницията си през 2015 г. и са показани и двете версии. Ревизираните национални сметки на Евростат показват спад на БВП през 1999 г. и ръст през 1996 г., което се различава от оценките, публикувани тогава. Данните за населението имат прекъсвания при преброяванията от 2001, 2011 и 2021 г.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">България, 1989–2026 · Генерирано от изкуствен интелект (Claude на Anthropic). Спекулативна история, „писана“ през 2050 г., с данни, публикувани до септември 2026 г. <a href="#prompt">Вижте промпта.</a></div></footer>
+<div class="tip" id="tip" hidden></div>
+
+<script>
+const D = {"gdp_pps":[[1995,43],[1996,37],[1997,30],[1998,31],[1999,28],[2000,29],[2001,30],[2002,32],[2003,34],[2004,35],[2005,38],[2006,38],[2007,40],[2008,43],[2009,43],[2010,44],[2011,45],[2012,47],[2013,46],[2014,48],[2015,49],[2016,51],[2017,52],[2018,53],[2019,55],[2020,57],[2021,60],[2022,62],[2023,64],[2024,66],[2025,68]],"aic_pps":[[1995,43],[1996,44],[1997,30],[1998,30],[1999,31],[2000,32],[2001,34],[2002,35],[2003,38],[2004,39],[2005,42],[2006,42],[2007,45],[2008,46],[2009,44],[2010,45],[2011,48],[2012,51],[2013,51],[2014,54],[2015,55],[2016,56],[2017,57],[2018,59],[2019,60],[2020,62],[2021,67],[2022,69],[2023,70],[2024,74]],"medinc_ratio":[[2011,40.0],[2012,38.3],[2013,39.2],[2014,44.7],[2015,44.0],[2016,41.0],[2017,45.5],[2018,42.6],[2019,47.9],[2020,48.3],[2021,52.0],[2022,51.7],[2023,56.0],[2024,61.6],[2025,65.6]],"medinc_pps":[[2006,3200],[2007,3299],[2008,4765],[2009,5751],[2010,5885],[2011,5831],[2012,5697],[2013,5900],[2014,6754],[2015,6882],[2016,6742],[2017,7533],[2018,7218],[2019,8371],[2020,8647],[2021,9375],[2022,9671],[2023,11155],[2024,13079],[2025,14843]],"growth":[[1989,-3.3],[1990,-9.1],[1991,-8.4],[1992,-7.3],[1993,-1.5],[1994,1.8],[1995,2.9],[1996,5.2],[1997,-14.1],[1998,3.8],[1999,-8.4],[2000,4.6],[2001,3.8],[2002,5.9],[2003,5.2],[2004,6.5],[2005,7.1],[2006,6.8],[2007,6.7],[2008,6.1],[2009,-3.3],[2010,1.6],[2011,2.1],[2012,0.7],[2013,-0.5],[2014,0.9],[2015,3.4],[2016,3],[2017,2.7],[2018,2.3],[2019,3.8],[2020,-3.1],[2021,7.8],[2022,4.1],[2023,1.7],[2024,3.4],[2025,3.1]],"inflation":[[1989,6.4],[1990,23.8],[1991,338.4],[1992,91.3],[1993,72.9],[1994,96.1],[1995,62.1],[1996,121.6],[1997,1058.4],[1998,18.7],[1999,2.6],[2000,10.3],[2001,7.4],[2002,5.8],[2003,2.3],[2004,6.1],[2005,6],[2006,7.4],[2007,7.6],[2008,12],[2009,2.5],[2010,3],[2011,3.4],[2012,2.4],[2013,0.4],[2014,-1.6],[2015,-1.1],[2016,-1.3],[2017,1.2],[2018,2.6],[2019,2.5],[2020,1.2],[2021,2.8],[2022,13],[2023,8.6],[2024,2.6],[2025,3.5]],"unemp":[[1991,11.1],[1992,15.3],[1993,16.4],[1994,12.8],[1995,11.1],[1996,12.5],[1997,13.7],[1998,12.2],[1999,14.1],[2000,16.2],[2001,19.9],[2002,18.1],[2003,13.7],[2004,12],[2005,10.1],[2006,9],[2007,6.9],[2008,5.6],[2009,7.9],[2010,11.3],[2011,12.3],[2012,13.3],[2013,13.9],[2014,12.4],[2015,10.1],[2016,8.6],[2017,7.2],[2018,6.2],[2019,5.2],[2020,6.1],[2021,5.2],[2022,4.2],[2023,4.3],[2024,4.2],[2025,3.5]],"unemp_eu":[[2009,9.3],[2010,10.1],[2011,10.1],[2012,11.1],[2013,11.6],[2014,11],[2015,10.2],[2016,9.3],[2017,8.3],[2018,7.4],[2019,6.8],[2020,7.2],[2021,7.1],[2022,6.2],[2023,6.1],[2024,6],[2025,6]],"pop":[[1989,8.987],[1990,8.767],[1991,8.669],[1992,8.595],[1993,8.485],[1994,8.46],[1995,8.427],[1996,8.385],[1997,8.341],[1998,8.283],[1999,8.23],[2000,8.191],[2001,8.149],[2002,7.869],[2003,7.806],[2004,7.745],[2005,7.689],[2006,7.629],[2007,7.573],[2008,7.518],[2009,7.467],[2010,7.422],[2011,7.369],[2012,7.327],[2013,7.203],[2014,7.117],[2015,7.03],[2016,6.939],[2017,6.85],[2018,6.757],[2019,6.664],[2020,6.569],[2021,6.532],[2022,6.482],[2023,6.448],[2024,6.445],[2025,6.437]],"life":[[1989,71.4],[1990,71.2],[1991,71.1],[1992,71.2],[1993,71.2],[1994,70.9],[1995,71],[1996,70.8],[1997,70.3],[1998,70.9],[1999,71.6],[2000,71.6],[2001,71.9],[2002,72.1],[2003,72.3],[2004,72.5],[2005,72.5],[2006,72.7],[2007,73],[2008,73.3],[2009,73.7],[2010,73.8],[2011,74.2],[2012,74.4],[2013,74.9],[2014,74.4],[2015,74.5],[2016,74.7],[2017,74.6],[2018,74.7],[2019,74.8],[2020,73.3],[2021,71.2],[2022,74.1],[2023,75.7],[2024,75.8]],"life_eu":[[2002,77.6],[2003,77.7],[2004,78.3],[2005,78.4],[2006,78.9],[2007,79.1],[2008,79.3],[2009,79.5],[2010,79.8],[2011,80.1],[2012,80.2],[2013,80.5],[2014,80.6],[2015,80.5],[2016,80.7],[2017,80.7],[2018,80.8],[2019,81.1],[2020,80.3],[2021,80],[2022,80.6],[2023,81.2],[2024,81.5]],"infant":[[1989,14.4],[1990,14.8],[1991,16.9],[1992,15.9],[1993,15.5],[1994,16.3],[1995,14.8],[1996,15.6],[1997,17.5],[1998,14.4],[1999,14.6],[2000,13.3],[2001,14.4],[2002,13.3],[2003,12.3],[2004,11.6],[2005,10.4],[2006,9.7],[2007,9.2],[2008,8.6],[2009,9],[2010,9.4],[2011,8.5],[2012,7.8],[2013,7.3],[2014,7.6],[2015,6.6],[2016,6.5],[2017,6.4],[2018,5.8],[2019,5.6],[2020,5.1],[2021,5.6],[2022,4.8],[2023,4.9],[2024,4.5]],"infant_eu":[[1989,11.1],[1990,10.7],[1991,10.2],[1992,9.7],[1993,9.1],[1994,8.6],[1995,7.7],[1996,7.4],[1997,6.9],[1998,6.6],[1999,6.2],[2000,6],[2001,5.8],[2002,5.5],[2003,5.2],[2004,5.1],[2005,4.8],[2006,4.6],[2007,4.4],[2008,4.2],[2009,4.2],[2010,4],[2011,3.8],[2012,3.8],[2013,3.7],[2014,3.6],[2015,3.6],[2016,3.6],[2017,3.5],[2018,3.4],[2019,3.4],[2020,3.3],[2021,3.2],[2022,3.3],[2023,3.3],[2024,3.5]],"minwage":[[1999,32],[2000,36],[2001,42],[2002,51],[2003,56],[2004,61],[2005,77],[2006,82],[2007,92],[2008,112],[2009,123],[2010,123],[2011,123],[2012,143],[2013,159],[2014,174],[2015,189],[2016,215],[2017,235],[2018,261],[2019,286],[2020,312],[2021,332],[2022,348],[2023,399],[2024,477],[2025,551],[2026,620]],"avgwage":[[2013,404],[2014,428],[2015,457],[2016,492],[2017,537],[2018,594],[2019,657],[2020,720],[2021,809],[2022,918],[2023,1058],[2024,1188]],"arope_old":[[2006,61.3],[2007,60.7],[2008,44.8],[2009,46.2],[2010,49.2],[2011,49.1],[2012,49.3],[2013,48],[2014,40.1],[2015,41.3],[2016,40.4],[2017,38.9],[2018,32.8],[2019,32.8],[2020,32.1]],"arope":[[2015,43.3],[2016,41],[2017,38],[2018,33],[2019,33.2],[2020,33.5],[2021,31.7],[2022,32.2],[2023,30],[2024,30.3],[2025,29]],"arope_eu":[[2015,24],[2016,23.7],[2017,22.4],[2018,21.7],[2019,21.1],[2020,21.5],[2021,21.7],[2022,21.6],[2023,21.3],[2024,21],[2025,20.9]],"smd":[[2006,57.7],[2007,57.6],[2008,41.2],[2009,41.9],[2010,45.7],[2011,43.6],[2012,44.1],[2013,43],[2014,33.1],[2015,34.2],[2016,31.9],[2017,30],[2018,20.9],[2019,20.9],[2020,19.4]],"smsd":[[2015,36.8],[2016,33.5],[2017,30],[2018,22.3],[2019,22.1],[2020,22.1],[2021,19.1],[2022,18.7],[2023,18],[2024,16.6],[2025,15]],"smsd_eu":[[2015,9.7],[2016,9],[2017,7.8],[2018,7.1],[2019,6.7],[2020,6.7],[2021,6.3],[2022,6.7],[2023,6.8],[2024,6.4],[2025,6.3]],"debt":[[1995,76.8],[1996,244.5],[1997,96.7],[1998,66.7],[1999,75.8],[2000,70.7],[2001,64.5],[2002,51],[2003,43.4],[2004,35.7],[2005,26.6],[2006,20.9],[2007,16.3],[2008,13],[2009,13.7],[2010,15.3],[2011,15.2],[2012,16.6],[2013,17],[2014,27],[2015,25.9],[2016,29.1],[2017,25.1],[2018,22.2],[2019,20.1],[2020,24.5],[2021,23.8],[2022,22.5],[2023,22.9],[2024,23.8],[2025,29.9]],"debt_eu":[[2000,66.6],[2001,65.8],[2002,65.6],[2003,66.8],[2004,67.1],[2005,67.2],[2006,65],[2007,62.4],[2008,65.1],[2009,75.7],[2010,80.4],[2011,81.7],[2012,85],[2013,86.8],[2014,86.9],[2015,85.1],[2016,84.1],[2017,81.5],[2018,79.5],[2019,77.5],[2020,89.5],[2021,86.7],[2022,82.4],[2023,80.5],[2024,80.7],[2025,81.7]],"gini":[[2014,35.4],[2015,37],[2016,37.7],[2017,40.2],[2018,39.6],[2019,40.8],[2020,40],[2021,39.7],[2022,38.4],[2023,37.2],[2024,38.4],[2025,37.7]],"gini_eu":[[2014,30.9],[2015,30.8],[2016,30.6],[2017,30.3],[2018,30.4],[2019,30.1],[2020,30],[2021,30.2],[2022,29.6],[2023,29.6],[2024,29.4],[2025,29.2]],"emig":[[2007,2958],[2012,16615],[2013,19678],[2014,28727],[2015,29470],[2016,30570],[2017,31586],[2018,33225],[2019,39941],[2020,6649],[2021,26755],[2022,13175],[2023,15227],[2024,13002]],"internet":[[1995,0.1],[1996,0.7],[1997,1.2],[1998,1.8],[1999,2.9],[2000,5.4],[2001,7.6],[2002,9.1],[2003,12],[2004,18.1],[2005,20],[2006,27.1],[2007,33.6],[2008,39.7],[2009,45],[2010,46.2],[2011,48],[2012,51.9],[2013,53.1],[2014,55.5],[2015,56.7],[2016,59.8],[2017,63.4],[2018,64.8],[2019,67.9],[2020,70.2],[2021,75.3],[2022,79.1],[2023,80.4],[2024,82.4]],"fert":[[1989,1.9],[1990,1.8],[1991,1.7],[1992,1.6],[1993,1.5],[1994,1.4],[1995,1.2],[1996,1.2],[1997,1.1],[1998,1.1],[1999,1.2],[2000,1.3],[2001,1.2],[2002,1.2],[2003,1.3],[2004,1.3],[2005,1.4],[2006,1.4],[2007,1.5],[2008,1.6],[2009,1.7],[2010,1.6],[2011,1.5],[2012,1.5],[2013,1.5],[2014,1.6],[2015,1.6],[2016,1.7],[2017,1.7],[2018,1.7],[2019,1.8],[2020,1.8],[2021,1.8],[2022,1.8],[2023,1.8],[2024,1.7]],"tertiary":[[2000,19.5],[2001,23.6],[2002,23.2],[2003,23.6],[2004,25.2],[2005,24.9],[2006,25.3],[2007,26],[2008,27.1],[2009,27.9],[2010,28],[2011,27.3],[2012,26.9],[2013,29.4],[2014,30.9],[2015,32.1],[2016,33.8],[2017,32.8],[2018,33.7],[2019,32.5],[2020,33.4],[2021,32.8],[2022,33.5],[2023,35],[2024,39.7],[2025,42.4]],"early":[[2001,20.5],[2002,20.7],[2003,21.9],[2004,21.4],[2005,20.4],[2006,17.3],[2007,14.9],[2008,14.8],[2009,14.7],[2010,12.6],[2011,11.8],[2012,12.5],[2013,12.5],[2014,12.9],[2015,13.4],[2016,13.8],[2017,12.7],[2018,12.7],[2019,13.9],[2020,12.8],[2021,12],[2022,10.3],[2023,9.3],[2024,8.2],[2025,8.6]],"emp":[[2009,68.2],[2010,64.1],[2011,62.3],[2012,62.4],[2013,62.9],[2014,64.4],[2015,66.5],[2016,67],[2017,70.6],[2018,71.7],[2019,74.3],[2020,72.7],[2021,73.3],[2022,75.9],[2023,76.2],[2024,76.8],[2025,77]],"emp_eu":[[2009,67.3],[2010,67],[2011,67.1],[2012,66.9],[2013,66.7],[2014,67.5],[2015,68.5],[2016,69.6],[2017,70.9],[2018,71.9],[2019,72.7],[2020,71.7],[2021,73],[2022,74.6],[2023,75.3],[2024,75.7],[2025,76.1]],"price_level":[[1995,26.2],[1996,20.3],[1997,27.1],[1998,31.7],[1999,32.2],[2000,33.7],[2001,35.8],[2002,36.3],[2003,35.6],[2004,37],[2005,38.3],[2006,41],[2007,43.1],[2008,45.9],[2009,47.7],[2010,46.7],[2011,46.4],[2012,46.5],[2013,45.5],[2014,44.4],[2015,44.8],[2016,45.1],[2017,46.7],[2018,47.6],[2019,49.4],[2020,51.3],[2021,51.6],[2022,54.3],[2023,55.8],[2024,56.9]]};
+const $ = (s, r=document) => r.querySelector(s);
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fmt = (v, d=1) => v==null ? '—' : Number(v).toLocaleString('bg-BG',{minimumFractionDigits:d,maximumFractionDigits:d});
+const num = v => typeof v === 'number' ? v.toLocaleString('bg-BG') : v;
+const get = (arr, y) => { const r = arr && arr.find(p => p[0]===y); return r ? r[1] : null; };
+const MONTHS = ['яну','фев','мар','апр','май','юни','юли','авг','сеп','окт','ное','дек'];
+
+/* ---------- tooltip ---------- */
+const tip = $('#tip');
+function showTip(html, x, y){
+  tip.innerHTML = html; tip.hidden = false;
+  const r = tip.getBoundingClientRect();
+  let lx = x + 14, ly = y + 14;
+  if (lx + r.width > innerWidth - 8) lx = x - r.width - 14;
+  if (ly + r.height > innerHeight - 8) ly = y - r.height - 14;
+  tip.style.left = Math.max(8,lx)+'px'; tip.style.top = Math.max(8,ly)+'px';
+}
+function hideTip(){ tip.hidden = true; }
+
+/* ---------- figure scaffold ---------- */
+function figure(id, {title, cap, src, legend=[], table}){
+  const f = document.getElementById(id);
+  const lg = legend.length ? `<div class="legend">${legend.map(l=>`<span><i class="${l.dash?'dash':''} ${l.sq?'sq':''}" style="background:${l.color}"></i>${l.label}</span>`).join('')}</div>` : '';
+  f.innerHTML = `<div class="fig-head"><div class="fig-title">${title}</div>${lg}</div>${cap?`<div class="fig-cap">${cap}</div>`:''}<div class="chart"></div><div class="fig-head"><span class="fig-src">Източник: ${src}</span></div>${table?`<details class="table-view"><summary>Покажи таблица с данните</summary><div class="tv">${table}</div></details>`:''}`;
+  return f.querySelector('.chart');
+}
+function tableOf(cols){
+  const years = [...new Set(cols.flatMap(c=>c.data.map(p=>p[0])))].sort((a,b)=>a-b);
+  return `<table><thead><tr><th>Година</th>${cols.map(c=>`<th>${c.label}</th>`).join('')}</tr></thead><tbody>${years.map(y=>`<tr><td>${y}</td>${cols.map(c=>{const v=get(c.data,y);return `<td>${v==null?'—':num(v)}</td>`}).join('')}</tr>`).join('')}</tbody></table>`;
+}
+function observeSize(el, draw){ let w=0; new ResizeObserver(()=>{ if (el.clientWidth!==w){ w=el.clientWidth; draw(); } }).observe(el); }
+
+/* ---------- line chart ---------- */
+function lineChart(el, cfg){
+  const draw = () => {
+    const W = el.clientWidth, H = cfg.h || (W < 520 ? 240 : 290);
+    const m = {t:18, r: W<520? 58: 96, b:26, l:44};
+    const iw = W-m.l-m.r, ih = H-m.t-m.b;
+    const x = v => m.l + (v-cfg.x0)/(cfg.x1-cfg.x0)*iw;
+    const y = v => m.t + ih - (v-cfg.y0)/(cfg.y1-cfg.y0)*ih;
+    let s = `<svg viewBox="0 0 ${W} ${H}" height="${H}" role="img" aria-label="${cfg.aria}">`;
+    if (cfg.band){ const [a,b]=cfg.band; s += `<rect class="band-hl" x="${x(a-0.5)}" y="${m.t}" width="${x(b+0.5)-x(a-0.5)}" height="${ih}"/><text class="band-lbl" x="${x(a-0.5)+4}" y="${m.t+11}">ТАЗИ ГЛАВА</text>`; }
+    cfg.yTicks.forEach(t => { s += `<line class="grid" x1="${m.l}" x2="${m.l+iw}" y1="${y(t)}" y2="${y(t)}"/><text x="${m.l-6}" y="${y(t)+4}" text-anchor="end">${cfg.yFmt?cfg.yFmt(t):num(t)}</text>`; });
+    const step = W < 520 ? 10 : 5;
+    for (let t=Math.ceil(cfg.x0/step)*step; t<=cfg.x1; t+=step) s += `<text x="${x(t)}" y="${H-6}" text-anchor="middle">${t}</text>`;
+    s += `<line class="axis" x1="${m.l}" x2="${m.l+iw}" y1="${m.t+ih}" y2="${m.t+ih}"/>`;
+    (cfg.notes||[]).forEach(n => { s += `<line x1="${x(n.x)}" x2="${x(n.x)}" y1="${m.t+14}" y2="${m.t+ih}" stroke="var(--line)" stroke-dasharray="2 3"/><text x="${x(n.x)+4}" y="${m.t+ (n.dy||24)}" class="lbl" style="font-size:10.5px">${n.text}</text>`; });
+    const endLabels = [];
+    cfg.series.forEach(se => {
+      const pts = se.data.filter(p=>p[0]>=cfg.x0 && p[0]<=cfg.x1);
+      if(!pts.length) return;
+      const dpath = pts.map((p,i)=>`${i?'L':'M'}${x(p[0]).toFixed(1)},${y(p[1]).toFixed(1)}`).join('');
+      if (se.area) s += `<path d="${dpath}L${x(pts[pts.length-1][0])},${y(cfg.y0)}L${x(pts[0][0])},${y(cfg.y0)}Z" fill="${se.color}" opacity=".10"/>`;
+      s += `<path d="${dpath}" fill="none" stroke="${se.color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" ${se.dash?'stroke-dasharray="5 4"':''}/>`;
+      const last = pts[pts.length-1];
+      s += `<circle cx="${x(last[0])}" cy="${y(last[1])}" r="4" fill="${se.color}" stroke="var(--card)" stroke-width="2"/>`;
+      endLabels.push({y:y(last[1]), x:x(last[0]), text:`${cfg.vFmt?cfg.vFmt(last[1]):num(last[1])} ${se.short||''}`});
+    });
+    endLabels.sort((a,b)=>a.y-b.y); for(let i=1;i<endLabels.length;i++) if(endLabels[i].y-endLabels[i-1].y<14) endLabels[i].y=endLabels[i-1].y+14;
+    endLabels.forEach(l => s += `<text class="lbl" x="${l.x+8}" y="${l.y+4}">${l.text}</text>`);
+    s += `<line class="xh" x1="0" x2="0" y1="${m.t}" y2="${m.t+ih}" visibility="hidden"/><g class="dots"></g>`;
+    s += `<rect x="${m.l}" y="${m.t}" width="${iw}" height="${ih}" fill="transparent" class="hit"/></svg>`;
+    el.innerHTML = s;
+    const svg = el.querySelector('svg'), xh = svg.querySelector('.xh'), dots = svg.querySelector('.dots');
+    const move = ev => {
+      const r = svg.getBoundingClientRect();
+      const px = (ev.clientX - r.left) * (W / r.width);
+      const yr = Math.round(cfg.x0 + (px-m.l)/iw*(cfg.x1-cfg.x0));
+      if (yr<cfg.x0||yr>cfg.x1) return;
+      xh.setAttribute('x1',x(yr)); xh.setAttribute('x2',x(yr)); xh.setAttribute('visibility','visible');
+      let rows='', dd='';
+      cfg.series.forEach(se => { const v=get(se.data,yr); if(v!=null){ rows += `<div class="r"><span><i style="background:${se.color}"></i>${se.label}</span><span>${cfg.vFmt?cfg.vFmt(v):num(v)}</span></div>`; dd += `<circle cx="${x(yr)}" cy="${y(v)}" r="4.5" fill="${se.color}" stroke="var(--card)" stroke-width="2"/>`; } });
+      dots.innerHTML = dd;
+      const ctx = cfg.ctx ? cfg.ctx(yr) : '';
+      if (rows) showTip(`<b>${yr}</b>${rows}${ctx}`, ev.clientX, ev.clientY); else hideTip();
+    };
+    svg.querySelector('.hit').addEventListener('pointermove', move);
+    svg.querySelector('.hit').addEventListener('pointerleave', ()=>{ hideTip(); xh.setAttribute('visibility','hidden'); dots.innerHTML=''; });
+  };
+  observeSize(el, draw);
+}
+
+/* ---------- bar chart ---------- */
+function barChart(el, cfg){
+  const draw = () => {
+    const W = el.clientWidth, H = cfg.h || (W<520?220:260);
+    const m = {t:22,r:12,b:26,l:44}, iw=W-m.l-m.r, ih=H-m.t-m.b;
+    const n = cfg.x1-cfg.x0+1, bw = iw/n;
+    const x = v => m.l + (v-cfg.x0)*bw;
+    const y = v => m.t + ih - (Math.min(v,cfg.y1)-cfg.y0)/(cfg.y1-cfg.y0)*ih;
+    let s = `<svg viewBox="0 0 ${W} ${H}" height="${H}" role="img" aria-label="${cfg.aria}">`;
+    if (cfg.band){ const [a,b]=cfg.band; s += `<rect class="band-hl" x="${x(a)}" y="${m.t}" width="${x(b+1)-x(a)}" height="${ih}"/>${cfg.bandBottom?'':`<text class="band-lbl" x="${x(a)+4}" y="${m.t+11}">ТАЗИ ГЛАВА</text>`}`; }
+    cfg.yTicks.forEach(t => s += `<line class="grid" x1="${m.l}" x2="${m.l+iw}" y1="${y(t)}" y2="${y(t)}"/><text x="${m.l-6}" y="${y(t)+4}" text-anchor="end">${cfg.yFmt?cfg.yFmt(t):num(t)}</text>`);
+    const step = W<520?10:5;
+    for (let t=Math.ceil(cfg.x0/step)*step; t<=cfg.x1; t+=step) s += `<text x="${x(t)+bw/2}" y="${H-6}" text-anchor="middle">${t}</text>`;
+    const gap = Math.min(2, bw*0.25);
+    cfg.data.forEach(([yr,v]) => {
+      if (yr<cfg.x0||yr>cfg.x1) return;
+      const y0 = y(Math.max(cfg.y0,0)), y1 = y(v), top=Math.min(y0,y1), h=Math.max(1,Math.abs(y1-y0));
+      s += `<rect data-y="${yr}" x="${x(yr)+gap/2}" y="${top}" width="${Math.max(1,bw-gap)}" height="${h}" rx="${Math.min(2,bw/4)}" fill="${cfg.color(v,yr)}"/>`;
+      if (v>cfg.y1) s += `<text class="lbl" x="${x(yr)+bw/2}" y="${m.t-6}" text-anchor="middle">${cfg.vFmt(v)} ▲</text><line x1="${x(yr)}" x2="${x(yr)+bw}" y1="${m.t+6}" y2="${m.t+2}" stroke="var(--card)" stroke-width="3"/>`;
+    });
+    s += `<line class="axis" x1="${m.l}" x2="${m.l+iw}" y1="${y(0)}" y2="${y(0)}"/>`;
+    (cfg.labels||[]).forEach(l => { const v=get(cfg.data,l.x); if(v==null) return; const yy = v>=0? y(v)-6 : y(v)+13; s += `<text class="lbl" x="${x(l.x)+bw/2}" y="${yy}" text-anchor="${l.anchor||'middle'}">${l.text||cfg.vFmt(v)}</text>`; });
+    s += `<rect x="${m.l}" y="${m.t}" width="${iw}" height="${ih}" fill="transparent" class="hit"/></svg>`;
+    el.innerHTML = s;
+    const svg = el.querySelector('svg');
+    svg.querySelector('.hit').addEventListener('pointermove', ev => {
+      const r = svg.getBoundingClientRect(); const px=(ev.clientX-r.left)*(W/r.width);
+      const yr = cfg.x0 + Math.floor((px-m.l)/bw); const v = get(cfg.data, yr);
+      svg.querySelectorAll('rect[data-y]').forEach(b => b.style.opacity = (+b.dataset.y===yr?1:.45));
+      if (v==null){ hideTip(); return; }
+      showTip(`<b>${yr}</b><div class="r"><span>${cfg.name}</span><span>${cfg.vFmt(v)}</span></div>${cfg.ctx?cfg.ctx(yr):''}`, ev.clientX, ev.clientY);
+    });
+    svg.querySelector('.hit').addEventListener('pointerleave', ()=>{ hideTip(); svg.querySelectorAll('rect[data-y]').forEach(b=>b.style.opacity=1); });
+  };
+  observeSize(el, draw);
+}
+
+/* ---------- кой управляваше ---------- */
+const GOV = [
+ {pm:'Андрей Луканов', party:'БСП', fam:'left', from:1989.1, to:1990.9, a:1989, b:1990, v:'bad', why:'Наследи фалирала планова икономика. Правителството му спря плащанията по външния дълг през 1990 г. и отложи ценовата реформа, докато дефицитите се разрастваха. Осигури мирното предаване на властта.'},
+ {pm:'Димитър Попов', party:'Безпартийна коалиция', fam:'other', from:1990.95, to:1991.9, a:1990, b:1991, v:'mixed', why:'Необходимата и болезнена либерализация на цените вдигна инфлацията до 338%. Кабинетът му доведе страната до Конституцията от 1991 г. и честни избори.'},
+ {pm:'Филип Димитров', party:'СДС', fam:'right', from:1991.9, to:1992.95, a:1991, b:1992, v:'mixed', why:'Реституция на земя и имоти и твърда западна ориентация. Хаотичното разтуряне на кооперациите удари земеделието, а правителството падна след година.'},
+ {pm:'Любен Беров', party:'Експертен (мандат на ДПС)', fam:'dps', from:1992.95, to:1994.8, a:1992, b:1994, v:'bad', why:'Реформите спряха. „Кредитните милионери“ и рекетьорските застрахователни фирми процъфтяваха, а безработицата достигна 16,4%.'},
+ {pm:'Жан Виденов', party:'БСП', fam:'left', from:1995.05, to:1997.1, a:1994, b:1997, v:'bad', why:'Банков срив, зърнена криза и хиперинфлация от 1058% през 1997 г. БВП спадна с 14%. Най-тежкият резултат за домакинствата от всички правителства в периода.'},
+ {pm:'Иван Костов', party:'СДС', fam:'right', from:1997.4, to:2001.6, a:1997, b:2001, v:'good', why:'Валутният борд сложи край на хиперинфлацията, дългът спадна от 97% на 64% от БВП, започнаха преговорите с ЕС и безвизовото пътуване. Срещу това стоят рекордната безработица от 19,9% и спорната приватизация.'},
+ {pm:'Симеон Сакскобургготски', party:'НДСВ + ДПС', fam:'new', from:2001.6, to:2005.6, a:2001, b:2005, v:'good', why:'Безработицата се сви наполовина, дългът спадна до 27% от БВП, България влезе в НАТО и договорът с ЕС беше подписан. Доходите изоставаха, а обещанията срещу корупцията не бяха изпълнени.'},
+ {pm:'Сергей Станишев', party:'БСП + НДСВ + ДПС', fam:'left', from:2005.6, to:2009.6, a:2005, b:2009, v:'mixed', why:'Присъединяване към ЕС, плосък данък, бърз растеж и безработица от 5,6%. Срещу това – замразени европейски средства заради корупция, инфлация от 12% и прегрял кредитен бум.'},
+ {pm:'Бойко Борисов I', party:'ГЕРБ', fam:'gerb', from:2009.6, to:2013.2, a:2009, b:2013, v:'mixed', why:'Нисък дълг през кризата в еврозоната и завършени магистрали. Безработицата се удвои до 13,9%, заплатите бяха замразени, а протестите срещу сметките за ток доведоха до оставката му.'},
+ {pm:'Пламен Орешарски', party:'БСП + ДПС', fam:'left', from:2013.4, to:2014.6, a:2013, b:2014, v:'bad', why:'Назначението на Пеевски предизвика година протести. Фалитът на КТБ замрази спестявания, а дефицитът достигна 5,4%.'},
+ {pm:'Бойко Борисов II', party:'ГЕРБ + РБ + АБВ', fam:'gerb', from:2014.85, to:2017.05, a:2014, b:2016, v:'good', why:'Безработицата спадна от 12,4% на 8,6%, минималната заплата се увеличи с 24%, а бюджетът се върна към излишък през 2016 г.'},
+ {pm:'Бойко Борисов III', party:'ГЕРБ + Обединени патриоти', fam:'gerb', from:2017.35, to:2021.35, a:2017, b:2020, v:'mixed', why:'Рекордна заетост, бързо намаляващи бедност и лишения, влизане в ERM II. Срещу това – най-лошите в ЕС класации за свобода на медиите и корупция, протестите от 2020 г. и слабият отговор на пандемията.'},
+ {pm:'Кирил Петков', party:'ПП + БСП + ИТН + ДБ', fam:'new', from:2021.95, to:2022.6, a:2021, b:2022, v:'mixed', why:'Сложи край на зависимостта от „Газпром“ и започна енергийна помощ и антикорупционни мерки. Инфлацията достигна 13%, а коалицията се разпадна за седем месеца.'},
+ {pm:'Николай Денков', party:'ПП–ДБ с ГЕРБ', fam:'right', from:2023.45, to:2024.3, a:2023, b:2024, v:'good', why:'Влизане в Шенген по въздух и море, стабилен бюджет и път към критериите за еврото. Приключи с договорената ротация, която така и не се осъществи.'},
+ {pm:'Росен Желязков', party:'ГЕРБ + БСП + ИТН', fam:'gerb', from:2025.05, to:2025.95, a:2024, b:2025, v:'mixed', why:'Пълно членство в Шенген, одобрено евро и безработица от 3,5%. Правителството зависеше от подкрепата на Пеевски, а бюджетът му за 2026 г. с по-високи осигуровки предизвика протестите, които го свалиха.'},
+];
+const CARETAKERS = [[1994.8,1995.05,'Инджова'],[1997.1,1997.4,'Софиянски'],[2013.2,2013.4,'Райков'],[2014.6,2014.85,'Близнашки'],[2017.05,2017.35,'Герджиков'],[2021.35,2021.95,'Янев'],[2022.6,2023.45,'Донев'],[2024.3,2025.05,'Главчев'],[2025.95,2026.35,'Гюров']];
+const whoGoverned = yr => { const g = GOV.filter(g => Math.floor(g.from)<=yr && g.to>=yr).map(g=>g.pm.replace(/ I+$/,'')); return g.length?`<div style="margin-top:4px;opacity:.75">Правителство: ${[...new Set(g)].join(' → ')}</div>`:''; };
+
+const FAM = {
+  left:{label:'Левица · БСП', c:'var(--s-red)'},
+  dps:{label:'ДПС', c:'var(--s-aqua)'},
+  new:{label:'Нови движения', c:'var(--s-orange)'},
+  right:{label:'Реформаторска десница', c:'var(--s-blue)'},
+  nat:{label:'Националисти', c:'var(--s-yellow)'},
+  pb:{label:'Прогресивна България', c:'var(--s-magenta)'},
+  gerb:{label:'ГЕРБ', c:'var(--s-violet)'},
+  other:{label:'Други / безпартийни', c:'var(--s-grey)'},
+};
+
+/* ---------- графики ---------- */
+const pct = v => num(v)+'%';
+const C = { b:'var(--s-blue)', o:'var(--s-orange)', a:'var(--s-aqua)', ref:'var(--ref)' };
+const eur = v => num(Math.round(v))+' €';
+
+barChart(figure('f-growth',{title:'Реален ръст на БВП, % годишно',cap:'Производството се сви в пет от първите десет години. Задръжте курсора върху стълб, за да видите кое правителство е управлявало.',src:'Световна банка; Евростат nama_10_gdp (ревизиран ред)',table:tableOf([{label:'Ръст на БВП, %',data:D.growth}])}),
+  {data:D.growth,x0:1989,x1:2025,y0:-16,y1:12,yTicks:[-15,-10,-5,0,5,10],yFmt:pct,band:[1989,1991],name:'Реален БВП',vFmt:v=>(v>0?'+':'')+fmt(v)+'%',color:v=>v<0?'var(--s-red)':'var(--s-blue)',labels:[{x:1990},{x:1997},{x:2009},{x:2021}],ctx:whoGoverned,aria:'Стълбовидна графика на реалния ръст на БВП 1989–2025'});
+
+lineChart(figure('f-unemp',{title:'Равнище на безработица, % от работната сила',legend:[{label:'България',color:C.b},{label:'ЕС-27',color:C.ref,dash:1}],src:'Световна банка (модел на МОТ) до 2008; Евростат une_rt_a от 2009',table:tableOf([{label:'България',data:D.unemp},{label:'ЕС-27',data:D.unemp_eu}])}),
+  {series:[{label:'България',short:'БГ',data:D.unemp,color:C.b,area:1},{label:'ЕС-27',short:'ЕС',data:D.unemp_eu,color:C.ref,dash:1}],x0:1991,x1:2025,y0:0,y1:22,yTicks:[0,5,10,15,20],yFmt:pct,vFmt:v=>fmt(v)+'%',band:[1991,1996],ctx:whoGoverned,aria:'Безработица 1991–2025'});
+
+barChart(figure('f-infl',{title:'Потребителска инфлация, % годишно',cap:'Стълбът за 1997 г. е отрязан. В същия мащаб той би бил около седем пъти по-висок от графиката.',src:'Световна банка ИПЦ до 1997; Евростат ХИПЦ от 1998',table:tableOf([{label:'Инфлация, %',data:D.inflation}])}),
+  {data:D.inflation,x0:1989,x1:2025,y0:-5,y1:150,yTicks:[0,50,100,150],yFmt:pct,band:[1996,1997],bandBottom:1,name:'Инфлация',vFmt:v=>fmt(v)+'%',color:()=>'var(--s-orange)',labels:[{x:2022}],ctx:whoGoverned,aria:'Инфлация 1989–2025'});
+
+lineChart(figure('f-conv',{title:'Догонването на Европа (ЕС-27 = 100, по СПС)',legend:[{label:'Потребление на човек (ФИП)',color:C.o},{label:'БВП на човек',color:C.b}],cap:'Фактическото индивидуално потребление (ФИП) на човек е по-добрата мярка за това как живеят домакинствата. То се покачи от 30 на 74.',src:'Евростат prc_ppp_ind, tec00114',table:tableOf([{label:'ФИП',data:D.aic_pps},{label:'БВП',data:D.gdp_pps}])}),
+  {series:[{label:'Потребление на човек',short:'ФИП',data:D.aic_pps,color:C.o},{label:'БВП на човек',short:'БВП',data:D.gdp_pps,color:C.b}],x0:1995,x1:2025,y0:0,y1:100,yTicks:[0,25,50,75,100],band:[1997,2001],notes:[{x:2007,text:'ЕС'},{x:2020,text:'ERM II',dy:38}],ctx:whoGoverned,aria:'Сближаване на потреблението и БВП на човек с ЕС'});
+
+lineChart(figure('f-debt',{title:'Държавен дълг, % от БВП',legend:[{label:'България',color:C.b},{label:'ЕС-27',color:C.ref,dash:1}],cap:'Пикът от 245% през 1996 г. е извън мащаба. От 2005 г. България поддържа едно от най-ниските нива на дълг в ЕС.',src:'Евростат gov_10dd_edpt1',table:tableOf([{label:'България',data:D.debt},{label:'ЕС-27',data:D.debt_eu}])}),
+  {series:[{label:'България',short:'БГ',data:D.debt.filter(p=>p[0]>=1997),color:C.b,area:1},{label:'ЕС-27',short:'ЕС',data:D.debt_eu,color:C.ref,dash:1}],x0:1997,x1:2025,y0:0,y1:100,yTicks:[0,25,50,75,100],yFmt:pct,vFmt:v=>fmt(v)+'%',band:[2001,2005],notes:[{x:2014,text:'КТБ'}],ctx:whoGoverned,aria:'Държавен дълг 1997–2025'});
+
+(function(){
+  const host = document.getElementById('f-pop');
+  host.innerHTML = '<div class="fig-two"><figure class="fig" id="f-pop-a2" style="margin:0;border:0;padding:0"></figure><figure class="fig" id="f-pop-b2" style="margin:0;border:0;padding:0"></figure></div>';
+  lineChart(figure('f-pop-a2',{title:'Население към 1 януари, милиони',src:'Евростат demo_pjan',table:tableOf([{label:'Население (млн.)',data:D.pop}])}),
+    {series:[{label:'Население',short:'млн.',data:D.pop,color:C.b,area:1}],x0:1989,x1:2025,y0:6,y1:9.2,yTicks:[6,7,8,9],yFmt:v=>v+' млн.',vFmt:v=>fmt(v,2),band:[2005,2009],ctx:whoGoverned,aria:'Население 1989–2025',h:240});
+  barChart(figure('f-pop-b2',{title:'Емигранти годишно (регистрирани)',src:'Евростат migr_emi2 · 2008–2011 няма данни',table:tableOf([{label:'Емигранти',data:D.emig}])}),
+    {data:D.emig,x0:2007,x1:2024,y0:0,y1:42000,yTicks:[0,10000,20000,30000,40000],yFmt:v=>v/1000+' хил.',name:'Емигранти',vFmt:v=>num(v),color:()=>'var(--s-aqua)',labels:[{x:2019}],aria:'Емиграция 2007–2024',h:240});
+  host.insertAdjacentHTML('beforeend','<div class="fig-cap">Регистрираната емиграция подценява реалния отлив, защото много от заминалите никога не се отписват. Преброяването от 2021 г. отчете 6,52 милиона жители – с 845 000 по-малко, отколкото през 2011 г.</div>');
+})();
+
+lineChart(figure('f-wage',{title:'Месечни заплати в евро',legend:[{label:'Средна брутна заплата (НСИ)',color:C.b},{label:'Минимална заплата',color:C.o}],cap:'Минималната заплата остана 123 € от 2009 до 2011 г., а до 2026 г. се увеличи двадесет пъти спрямо нивото от 1999 г. С около 40% от средната заплата тя е ниска по европейските стандарти.',src:'НСИ (средна заплата 2013–2024); Евростат earn_mw_cur (минимална заплата)',table:tableOf([{label:'Минимална, €',data:D.minwage},{label:'Средна брутна, €',data:D.avgwage}])}),
+  {series:[{label:'Средна брутна заплата',short:'средна',data:D.avgwage,color:C.b},{label:'Минимална заплата',short:'мин.',data:D.minwage,color:C.o}],x0:1999,x1:2026,y0:0,y1:1250,yTicks:[0,250,500,750,1000,1250],yFmt:v=>num(v)+' €',vFmt:eur,band:[2009,2013],ctx:whoGoverned,aria:'Минимална и средна заплата в евро'});
+
+lineChart(figure('f-pov',{title:'Бедност и лишения, % от населението',legend:[{label:'Риск от бедност или изключване (стар метод)',color:C.b},{label:'Същото, дефиниция от 2021 г.',color:C.a},{label:'Тежки материални лишения',color:C.o},{label:'ЕС-27, дефиниция от 2021 г.',color:C.ref,dash:1}],cap:'Дефинициите се промениха през 2015 г., затова са показани и двата реда. По всички показатели най-стръмният спад е през 2014–2019 г.',src:'Евростат ilc_peps01, ilc_peps01n, ilc_mddd11',table:tableOf([{label:'Риск (стар)',data:D.arope_old},{label:'Риск (нов)',data:D.arope},{label:'Тежки лишения',data:D.smd},{label:'ЕС, риск',data:D.arope_eu}])}),
+  {series:[{label:'Риск от бедност (стар)',short:'',data:D.arope_old,color:C.b},{label:'Риск от бедност (нов)',short:'БГ',data:D.arope,color:C.a},{label:'Тежки лишения',short:'',data:D.smd,color:C.o},{label:'ЕС-27 (нов)',short:'ЕС',data:D.arope_eu,color:C.ref,dash:1}],x0:2006,x1:2025,y0:0,y1:65,yTicks:[0,20,40,60],yFmt:pct,vFmt:v=>fmt(v)+'%',band:[2014,2021],notes:[{x:2007,text:'ЕС',dy:14}],ctx:whoGoverned,aria:'Бедност и лишения 2006–2025'});
+
+(function(){
+  const host = document.getElementById('f-health');
+  host.innerHTML = '<div class="fig-two"><figure class="fig" id="f-h1" style="margin:0;border:0;padding:0"></figure><figure class="fig" id="f-h2" style="margin:0;border:0;padding:0"></figure></div>';
+  lineChart(figure('f-h1',{title:'Очаквана продължителност на живота при раждане, години',legend:[{label:'България',color:C.b},{label:'ЕС-27',color:C.ref,dash:1}],src:'Евростат demo_mlexpec',table:tableOf([{label:'България',data:D.life},{label:'ЕС-27',data:D.life_eu}])}),
+    {series:[{label:'България',short:'БГ',data:D.life,color:C.b},{label:'ЕС-27',short:'ЕС',data:D.life_eu,color:C.ref,dash:1}],x0:1989,x1:2024,y0:68,y1:84,yTicks:[68,72,76,80,84],vFmt:v=>fmt(v),band:[2020,2021],ctx:whoGoverned,aria:'Продължителност на живота 1989–2024',h:250});
+  lineChart(figure('f-h2',{title:'Детска смъртност на 1000 живородени',legend:[{label:'България',color:C.b},{label:'ЕС-27',color:C.ref,dash:1}],src:'Евростат demo_minfind',table:tableOf([{label:'България',data:D.infant},{label:'ЕС-27',data:D.infant_eu}])}),
+    {series:[{label:'България',short:'БГ',data:D.infant,color:C.b},{label:'ЕС-27',short:'ЕС',data:D.infant_eu,color:C.ref,dash:1}],x0:1989,x1:2024,y0:0,y1:20,yTicks:[0,5,10,15,20],vFmt:v=>fmt(v),band:[2020,2021],ctx:whoGoverned,aria:'Детска смъртност 1989–2024',h:250});
+})();
+
+lineChart(figure('f-income',{title:'Медианен доход на домакинство като % от медианата в ЕС (СПС)',cap:'Вероятно най-добрата единична мярка за това как живее типичното домакинство спрямо Европа. Показателят се покачи от 40% на 66% за петнадесет години, като две трети от ръста дойдоха след 2018 г.',src:'Евростат ilc_di03 (медианен еквивалентен нетен доход, СПС)',table:tableOf([{label:'% от медианата в ЕС',data:D.medinc_ratio},{label:'Медиана, СПС',data:D.medinc_pps}])}),
+  {series:[{label:'България / ЕС',short:'%',data:D.medinc_ratio,color:C.a,area:1}],x0:2011,x1:2025,y0:0,y1:100,yTicks:[0,25,50,75,100],yFmt:pct,vFmt:v=>fmt(v)+'%',ctx:whoGoverned,aria:'Медианен доход спрямо ЕС',h:260});
+
+/* ---------- мандати ---------- */
+const EL = [
+ ['1990',400,[['БСП','left',211],['СДС','right',144],['ДПС','dps',23],['БЗНС','other',16],['Други','other',6]]],
+ ['1991',240,[['СДС','right',110],['БСП','left',106],['ДПС','dps',24]]],
+ ['1994',240,[['БСП','left',125],['СДС','right',69],['Народен съюз','right',18],['ДПС','dps',15],['Български бизнес блок','new',13]]],
+ ['1997',240,[['ОДС','right',137],['Демократична левица (БСП)','left',58],['ОНС (водено от ДПС)','dps',19],['Евролевица','left',14],['Български бизнес блок','new',12]]],
+ ['2001',240,[['НДСВ','new',120],['ОДС','right',51],['Коалиция за България (БСП)','left',48],['ДПС','dps',21]]],
+ ['2005',240,[['Коалиция за България (БСП)','left',82],['НДСВ','new',53],['ДПС','dps',34],['Атака','nat',21],['ОДС','right',20],['ДСБ','right',17],['БНС','right',13]]],
+ ['2009',240,[['ГЕРБ','gerb',116],['Коалиция за България (БСП)','left',40],['ДПС','dps',38],['Атака','nat',21],['Синя коалиция','right',15],['РЗС','other',10]]],
+ ['2013',240,[['ГЕРБ','gerb',97],['Коалиция за България (БСП)','left',84],['ДПС','dps',36],['Атака','nat',23]]],
+ ['2014',240,[['ГЕРБ','gerb',84],['БСП – Лява България','left',39],['ДПС','dps',38],['Реформаторски блок','right',23],['Патриотичен фронт','nat',19],['България без цензура','new',15],['Атака','nat',11],['АБВ','left',11]]],
+ ['2017',240,[['ГЕРБ','gerb',95],['БСП за България','left',80],['Обединени патриоти','nat',27],['ДПС','dps',26],['Воля','new',12]]],
+ ['апр 21',240,[['ГЕРБ–СДС','gerb',75],['ИТН','new',51],['БСП за България','left',43],['ДПС','dps',30],['Демократична България','right',27],['ИСМВ','new',14]]],
+ ['юли 21',240,[['ИТН','new',65],['ГЕРБ–СДС','gerb',63],['БСП за България','left',36],['Демократична България','right',34],['ДПС','dps',29],['ИСМВ','new',13]]],
+ ['ное 21',240,[['Продължаваме промяната (ПП)','new',67],['ГЕРБ–СДС','gerb',59],['ДПС','dps',34],['БСП за България','left',26],['ИТН','new',25],['Демократична България','right',16],['Възраждане','nat',13]]],
+ ['2022',240,[['ГЕРБ–СДС','gerb',67],['ПП','new',53],['ДПС','dps',36],['Възраждане','nat',27],['БСП за България','left',25],['Демократична България','right',20],['Български възход','other',12]]],
+ ['2023',240,[['ГЕРБ–СДС','gerb',69],['ПП–ДБ','right',64],['Възраждане','nat',37],['ДПС','dps',36],['БСП за България','left',23],['ИТН','new',11]]],
+ ['юни 24',240,[['ГЕРБ–СДС','gerb',68],['ДПС','dps',47],['ПП–ДБ','right',39],['Възраждане','nat',38],['БСП за България','left',19],['ИТН','new',16],['Величие','nat',13]]],
+ ['окт 24',240,[['ГЕРБ–СДС','gerb',66],['ПП–ДБ','right',36],['Възраждане','nat',33],['ДПС–Ново начало','dps',29],['АПС (отцепили се от ДПС)','dps',19],['БСП – Обединена левица','left',19],['ИТН','new',17],['МЕЧ','new',11],['Величие','nat',10]]],
+ ['2026',240,[['Прогресивна България','pb',131],['ГЕРБ–СДС','gerb',39],['ПП–ДБ','right',37],['ДПС','dps',21],['Възраждане','nat',12]]],
+];
+const FORDER = ['left','dps','new','right','nat','pb','gerb','other'];
+(function(){
+  const el = figure('f-seats',{title:'Кой държеше парламента: дял на мандатите по политически семейства, 1990–2026',legend:FORDER.map(k=>({label:FAM[k].label,color:FAM[k].c,sq:1})),cap:'Задръжте курсора върху колона, за да видите партиите. Групирането в семейства е на автора. ПП е сред новите движения, докато се явява самостоятелно, и в реформаторската десница, след като се обединява с „Демократична България“ през 2023 г. Великото народно събрание от 1990 г. има 400 депутати.',src:'Централна избирателна комисия, по Уикипедия',table:`<table><thead><tr><th>Избори</th><th>Места</th><th>Партии</th></tr></thead><tbody>${EL.map(e=>`<tr><td>${e[0]}</td><td>${e[1]}</td><td style="text-align:left">${e[2].map(p=>p[0]+' '+p[2]).join(' · ')}</td></tr>`).join('')}</tbody></table>`});
+  const draw = () => {
+    const W = el.clientWidth, H = W<520?260:300, m={t:10,r:8,b:34,l:38}, iw=W-m.l-m.r, ih=H-m.t-m.b;
+    const n = EL.length, bw = iw/n, g = Math.min(4, bw*.18);
+    let s = `<svg viewBox="0 0 ${W} ${H}" height="${H}" role="img" aria-label="Дял на мандатите по политически семейства на всеки избори">`;
+    [0,25,50,75,100].forEach(t=> s += `<text x="${m.l-6}" y="${m.t+ih-t/100*ih+4}" text-anchor="end">${t}%</text>`);
+    s += `<line x1="${m.l}" x2="${m.l+iw}" y1="${m.t+ih/2}" y2="${m.t+ih/2}" stroke="var(--ink-2)" stroke-dasharray="3 3" opacity=".5"/>`;
+    EL.forEach((e,i) => {
+      const fams = {}; e[2].forEach(p => fams[p[1]] = (fams[p[1]]||0)+p[2]);
+      let acc = 0; const x = m.l + i*bw + g/2;
+      FORDER.forEach(k => { const v = fams[k]; if(!v) return; const h = v/e[1]*ih; const y = m.t + ih - acc - h; acc += h;
+        s += `<rect x="${x}" y="${y+1}" width="${bw-g}" height="${Math.max(0,h-2)}" fill="${FAM[k].c}" rx="1.5"/>`; });
+      s += `<rect class="col" data-i="${i}" x="${m.l+i*bw}" y="${m.t}" width="${bw}" height="${ih}" fill="transparent"/>`;
+      s += `<text x="${x+(bw-g)/2}" y="${H-(i%2&&W<700?4:18)}" text-anchor="middle" style="font-size:${W<520?9:10.5}px">${e[0].replace(' ',' ')}</text>`;
+    });
+    s += `<text x="${m.l+iw}" y="${m.t+ih/2-4}" text-anchor="end" class="lbl" style="font-size:10px">мнозинство</text></svg>`;
+    el.innerHTML = s;
+    el.querySelectorAll('.col').forEach(c => { c.addEventListener('pointermove', ev => { const e = EL[+c.dataset.i]; showTip(`<b>Избори ${e[0]} · ${e[1]} места</b>${e[2].map(p=>`<div class="r"><span><i style="background:${FAM[p[1]].c}"></i>${p[0]}</span><span>${p[2]}</span></div>`).join('')}`, ev.clientX, ev.clientY); }); c.addEventListener('pointerleave', hideTip); });
+  };
+  observeSize(el, draw);
+})();
+
+/* ---------- оценки ---------- */
+(function(){
+  const cumGrowth = (a,b) => { let f=1; for(let y=a+1;y<=b;y++){ const g=get(D.growth,y); if(g!=null) f*=1+g/100; } return (f-1)*100; };
+  const avgInfl = (a,b) => { let s=0,n=0; for(let y=a+1;y<=b;y++){ const v=get(D.inflation,y); if(v!=null){s+=v;n++;} } return n? s/n : null; };
+  const delta = (arr,a,b) => { const x=get(arr,a), y=get(arr,b); return x!=null&&y!=null ? y-x : null; };
+  const rows = GOV.map(g => ({...g, gdp: cumGrowth(g.a,g.b), un: delta(D.unemp,g.a,g.b), inf: avgInfl(g.a,g.b), aic: delta(D.aic_pps,g.a,g.b)}));
+  const VL = {good:['good','✓','Подобри живота'], mixed:['warn','◐','Смесено'], bad:['bad','✕','Влоши живота']};
+  const SORTABLE = ['gdp','un','inf','aic'];
+  const cols = [
+    {k:'pm',label:'Правителство'},{k:'fam',label:'Семейство'},{k:'years',label:'Период'},
+    {k:'gdp',label:'Реален БВП',num:1,f:v=>(v>0?'+':'')+fmt(v)+'%',good:v=>v>0},
+    {k:'un',label:'Безработица Δ',num:1,f:v=>(v>0?'+':'')+fmt(v)+' пп',good:v=>v<0},
+    {k:'inf',label:'Ср. инфлация',num:1,f:v=>fmt(v)+'%',good:v=>v<5},
+    {k:'aic',label:'Стандарт Δ',num:1,f:v=>(v>0?'+':'')+v+' т.',good:v=>v>0},
+    {k:'v',label:'Присъда'}];
+  let sortK = null, dir = 1, filter='all';
+  const tbl = $('#score');
+  const render = () => {
+    let list = rows.filter(r => filter==='all' || r.v===filter);
+    if (sortK) list = [...list].sort((a,b)=>{ const x=a[sortK], y=b[sortK]; if(x==null) return 1; if(y==null) return -1; return (x>y?1:x<y?-1:0)*dir; });
+    tbl.innerHTML = `<thead><tr>${cols.map(c=>{ const key = c.k==='pm'?'from':c.k; const sortable = SORTABLE.includes(c.k)||c.k==='pm'; return `<th ${c.num?'style="text-align:right"':''} ${sortable?`aria-sort="${sortK===key?(dir>0?'ascending':'descending'):'none'}"`:''}>${sortable?`<button data-k="${key}">${c.label}</button>`:c.label}</th>`; }).join('')}</tr></thead><tbody>${list.map(r=>`<tr>
+      <td class="pm">${r.pm}<small>${r.party}</small></td>
+      <td><span class="fam"><i style="background:${FAM[r.fam].c}"></i>${FAM[r.fam].label}</span></td>
+      <td class="num">${r.a}–${r.b}</td>
+      ${SORTABLE.map(k=>{const c=cols.find(c=>c.k===k), v=r[k]; return `<td class="num ${v==null?'':(c.good(v)?'pos':'neg')}">${v==null?'<span title="Няма сравними данни преди 1995 г.">н.д.</span>':c.f(k==='aic'?Math.round(v):v)}</td>`}).join('')}
+      <td><span class="verdict"><span class="ico ${VL[r.v][0]}" aria-hidden="true">${VL[r.v][1]}</span>${VL[r.v][2]}</span></td></tr>
+      <tr class="why-row"><td colspan="${cols.length}" class="why"><span class="why-lbl">Защо:</span> ${r.why}</td></tr>`).join('')}</tbody>`;
+    tbl.querySelectorAll('th button').forEach(b => b.onclick = () => { const k=b.dataset.k; if (sortK===k) dir=-dir; else { sortK=k; dir = (k==='un'||k==='inf'||k==='from')?1:-1; } render(); });
+  };
+  document.querySelectorAll('#governments .chip').forEach(c => c.onclick = () => { filter=c.dataset.v; document.querySelectorAll('#governments .chip').forEach(x=>x.setAttribute('aria-pressed', x===c)); render(); });
+  render();
+
+  const el = figure('f-ribbon',{title:'Хронология на правителствата, 1989–2026',legend:FORDER.filter(k=>k!=='nat').map(k=>({label:FAM[k].label,color:FAM[k].c,sq:1})),cap:'Щрихованите блокове са служебни кабинети, назначени от президента. Задръжте курсора върху блок, за да видите името.',src:'Правителство на Република България; обобщение на автора'});
+  const ALL = [...GOV.map(g=>({n:g.pm, p:g.party, f:g.fam, a:g.from, b:g.to})), ...CARETAKERS.map(c=>({n:c[2]+' (служебен)',p:'Служебен кабинет',f:'care',a:c[0],b:c[1]})), {n:'Румен Радев',p:'Прогресивна България',f:'pb',a:2026.35,b:2026.75,now:1}];
+  const draw = () => {
+    const W = el.clientWidth, H = 74, m={l:4,r:4,t:8}, iw=W-m.l-m.r;
+    const x = v => m.l + (v-1989)/(2026.75-1989)*iw;
+    let s = `<svg viewBox="0 0 ${W} ${H}" height="${H}" role="img" aria-label="Хронология на правителствата"><defs><pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="5" height="5" fill="var(--card)"/><line x1="0" y1="0" x2="0" y2="5" stroke="var(--s-grey)" stroke-width="2"/></pattern></defs>`;
+    ALL.forEach((g,i) => { s += `<rect class="rb" data-i="${i}" x="${x(g.a)+1}" y="${m.t}" width="${Math.max(1.5,x(g.b)-x(g.a)-2)}" height="34" rx="2" fill="${g.f==='care'?'url(#hatch)':FAM[g.f].c}"/>`; });
+    const step = W<520?5:2; for(let y=1990;y<=2026;y+=step) s += `<line x1="${x(y)}" x2="${x(y)}" y1="${m.t+36}" y2="${m.t+41}" stroke="var(--line)"/><text x="${x(y)}" y="${H-6}" text-anchor="middle">${W<520?y:"'"+String(y).slice(2)}</text>`;
+    s += '</svg>'; el.innerHTML = s;
+    const when = a => { const y=Math.floor(a), mo=Math.round((a-y)*12); return MONTHS[Math.min(11,mo)]+' '+y; };
+    el.querySelectorAll('.rb').forEach(r => { r.addEventListener('pointermove', ev => { const g=ALL[+r.dataset.i]; showTip(`<b>${g.n}</b><div>${g.p}</div><div style="opacity:.75">${when(g.a)} – ${g.now?'днес':when(g.b)}</div>`, ev.clientX, ev.clientY); }); r.addEventListener('pointerleave', hideTip); });
+  };
+  observeSize(el, draw);
+})();
+
+/* ---------- личности ---------- */
+const PEOPLE = [
+ ['Тодор Живков','Todor Zhivkov','Комунистически лидер 1954–1989','left',4,'Ръководи следвоенната индустриализация и масовото жилищно строителство, които оформят страната, наследена от прехода.','„Възродителният процес“ и изгонването на турците през 1989 г., както и спирането на плащанията по външния дълг.'],
+ ['Петър Младенов','Petar Mladenov','Партиен лидер и държавен глава 1989–1990','left',3,'Отстрани Живков и откри Кръглата маса.','Подаде оставка след запис, на който казва „по-добре танковете да дойдат“ за протест.'],
+ ['Андрей Луканов','Andrey Lukanov','Министър-председател 1989–1990 (БСП)','left',3,'Един от архитектите на договорения, безкръвен преход.','Обвиняван за мораториума върху дълга през 1990 г. и за началото на източването на активи. Убит през 1996 г.'],
+ ['Желю Желев','Zhelyu Zhelev','Президент 1990–1997','right',4,'Философ дисидент, който като първи демократичен президент утвърди свободата на словото и етническия мир.','Скара се със СДС и имаше малко лостове срещу икономическия упадък.'],
+ ['Ахмед Доган','Ahmed Dogan','Основател на ДПС, лидер 1990–2013','dps',5,'Въведе българските турци в демократичната политика и помогна да се избегне етнически конфликт.','Превърна ДПС в партия на клиентелизма и в решаващ фактор за всяко мнозинство. Бил е сътрудник на Държавна сигурност.'],
+ ['Филип Димитров','Filip Dimitrov','Министър-председател 1991–1992 (СДС)','right',2,'Реституция на земя и имоти. Първото правителство в света, признало Македония.','Краткото му управление падна след масови чистки и сблъсъци с президента.'],
+ ['Жан Виденов','Zhan Videnov','Министър-председател 1995–1997 (БСП)','left',3,'Няма измерим положителен ефект в показателите.','Правителството на банковия срив, зърнената криза и хиперинфлацията от 1996–97 г.'],
+ ['Иван Костов','Ivan Kostov','Министър-председател 1997–2001 (СДС)','right',5,'Валутният борд, краят на хиперинфлацията, началото на преговорите с ЕС и безвизовото пътуване.','Рекордна безработица и приватизации, критикувани като сделки за „свои хора“.'],
+ ['Петър Стоянов','Petar Stoyanov','Президент 1997–2002','right',2,'Подкрепи стабилизацията от 1997 г. и курса към НАТО и ЕС.','Предимно церемониална фигура с малко конкретни лостове.'],
+ ['Симеон Сакскобургготски','Simeon Saxe-Coburg-Gotha','Министър-председател 2001–2005 (НДСВ)','new',4,'Намали безработицата наполовина, въведе България в НАТО и подписа договора с ЕС.','Неизпълненото обещание за „800 дни“ и претенциите за връщане на царските имоти.'],
+ ['Георги Първанов','Georgi Parvanov','Президент 2002–2012','left',3,'Държавен глава при присъединяването към НАТО и ЕС. Първият президент, избран два пъти.','Енергийните сделки с Русия („Белене“, „Южен поток“) и досието му в Държавна сигурност.'],
+ ['Сергей Станишев','Sergei Stanishev','Министър-председател 2005–2009 (БСП)','left',4,'Присъединяване към ЕС, 10% плосък данък и рекордно ниска за периода безработица.','Замразяването на европейски средства заради корупция и неудържаният кредитен балон.'],
+ ['Бойко Борисов','Boyko Borisov','Министър-председател 2009–13, 2014–17, 2017–21 (ГЕРБ)','gerb',5,'Магистрали, нисък дълг и ERM II. Безработицата и бедността достигнаха най-ниските си нива по време на третия му мандат.','Най-лошите в ЕС класации за свобода на медиите и корупция, протестите от 2020 г. и стил, изграден върху лична зависимост.'],
+ ['Росен Плевнелиев','Rosen Plevneliev','Президент 2012–2017','right',2,'Категорично прозападен президент, а като министър ръководи строителния бум с европейски пари.','Критикуван като пасивен президент по време на кризата от 2013–14 г.'],
+ ['Пламен Орешарски','Plamen Oresharski','Министър-председател 2013–2014 (БСП–ДПС)','other',2,'Като финансов министър през 2005–09 г. поддържаше бюджетни излишъци.','Кабинетът му назначи Пеевски в ДАНС и управляваше при фалита на КТБ.'],
+ ['Делян Пеевски','Delyan Peevski','Депутат, медиен собственик, лидер на ДПС от 2024 г.','dps',5,'Привържениците му изтъкват подкрепата му за правителството, което осигури еврото през 2025 г.','Санкциониран за корупция от САЩ (2021) и Великобритания (2023). Широко възприеман като символ на завладяната държава.'],
+ ['Румен Радев','Rumen Radev','Президент 2017–2026, министър-председател от 2026 г.','pb',5,'Подкрепи антикорупционните протести от 2020 г. и назначаваше служебни кабинети по време на кризата 2021–24 г.','Критикуван за позициите си за Русия и Украйна и за концентрирането на изпълнителна власт чрез служебните правителства. Равносметката му като премиер предстои.'],
+ ['Слави Трифонов','Slavi Trifonov','Шоумен, основател на ИТН','new',3,'Референдумът му от 2016 г. тласна изборната реформа. Спечели изборите през юли 2021 г.','Отказа да управлява след победата си, което удължи кризата.'],
+ ['Кирил Петков','Kiril Petkov','Министър-председател 2021–2022 (ПП)','new',3,'Сложи край на зависимостта от „Газпром“ и въведе антикорупционни и енергийни мерки.','Коалицията му се разпадна за седем месеца на фона на висока инфлация.'],
+ ['Асен Василев','Assen Vassilev','Финансов министър 2021–22, 2023–24 (ПП)','new',3,'Бюджетите му удържаха България в рамките на дефицитния критерий за еврото.','Критици го обвиняват в прекалени обещания и неефективност в коалиция.'],
+ ['Николай Денков','Nikolai Denkov','Министър-председател 2023–2024 (ПП–ДБ)','right',3,'Влизане в Шенген по въздух и море и стабилен бюджет. Химик, управлявал технократски.','Кабинетът му зависеше от ГЕРБ и от гласовете на Пеевски, а ротацията се провали.'],
+ ['Костадин Костадинов','Kostadin Kostadinov','Лидер на „Възраждане“','nat',3,'Даде глас на избирателите, скептични към еврото и санкциите.','Прокремълски позиции, дезинформация и кампании срещу еврото и ваксинацията.'],
+ ['Росен Желязков','Rosen Zhelyazkov','Министър-председател 2025 (ГЕРБ)','gerb',2,'Пълно членство в Шенген и окончателно одобрение на еврото.','Зависимост от Пеевски. Бюджетът му за 2026 г. предизвика масови протести и оставката му.'],
+ ['Илияна Йотова','Iliana Iotova','Президент от януари 2026 г.','left',2,'Първата жена държавен глава на България.','Мандатът ѝ е твърде скорошен, за да бъде оценен.'],
+];
+(function(){
+  const chips = $('#pchips'); let cur='all';
+  const fams = ['all',...FORDER.filter(k=>PEOPLE.some(p=>p[3]===k))];
+  chips.innerHTML = fams.map(k=>`<button class="chip" data-f="${k}" aria-pressed="${k==='all'}">${k==='all'?'Всички':`<i style="background:${FAM[k].c}"></i>${FAM[k].label}`}</button>`).join('');
+  const render = () => { $('#plist').innerHTML = PEOPLE.filter(p=>cur==='all'||p[3]===cur).map(p=>`<article class="person">
+    <div class="person-top"><h3>${p[0]}<span class="cyr">${p[1]}</span></h3><span class="infl" title="Влияние ${p[4]} от 5" aria-label="Влияние ${p[4]} от 5">${[1,2,3,4,5].map(i=>`<span class="${i<=p[4]?'on':''}"></span>`).join('')}</span></div>
+    <div class="role"><span class="fam"><i style="background:${FAM[p[3]].c}"></i>${p[2]}</span></div>
+    <dl><dt class="g">За ежедневието</dt><dd>${p[5]}</dd><dt class="b">Критики</dt><dd>${p[6]}</dd></dl></article>`).join(''); };
+  chips.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{ cur=c.dataset.f; chips.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed',x===c)); render(); });
+  render();
+})();
+
+/* ---------- копиране на промпта ---------- */
+(function(){
+  const btn = $('#copy-prompt'), pre = $('#prompt-text');
+  btn.addEventListener('click', () => {
+    const sel = () => { const r=document.createRange(); r.selectNodeContents(pre); const s=getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent='Маркирано – натиснете Ctrl+C'; };
+    try { navigator.clipboard.writeText(pre.textContent).then(()=>{ btn.textContent='Копирано'; setTimeout(()=>btn.textContent='Копирай',1800); }, sel); } catch(e){ sel(); }
+  });
+})();
+
+/* ---------- планини (паралакс) ---------- */
+(function(){
+  const host = $('#mtn'); let seed = 1989;
+  const rnd = () => (seed = (seed*9301+49297)%233280)/233280;
+  const layers = [['--mtn-1',0.55,.18,0.45],['--mtn-2',0.4,.32,0.30],['--mtn-3',0.28,.48,0.18],['--mtn-4',0.15,.66,0.06]];
+  host.innerHTML = layers.map(([c,amp,base,speed],li) => {
+    const N = 64; let pts = [];
+    for (let i=0;i<=N;i++){ const t=i/N; const h = base + amp*(0.5*Math.sin(t*6.3+li*1.7)+0.3*Math.sin(t*17+li)+0.2*(rnd()-0.5))*0.5; pts.push([t*1000, (1-h)*200]); }
+    const d = 'M0,200 ' + pts.map(p=>`L${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ') + ' L1000,200 Z';
+    return `<svg viewBox="0 0 1000 200" preserveAspectRatio="none" data-speed="${speed}" style="z-index:${li}"><path d="${d}" fill="var(${c})"/></svg>`;
+  }).join('');
+})();
+
+/* ---------- паралакс + хронометър ---------- */
+(function(){
+  const par = [...document.querySelectorAll('[data-speed]')];
+  const secs = [...document.querySelectorAll('main > section')];
+  const cy = $('#cy'), cl = $('#cl'), cb = $('#cb');
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    const vh = innerHeight;
+    if (!reduce) par.forEach(el => {
+      const hero = el.closest('.hero');
+      const r = (hero || el.parentElement).getBoundingClientRect();
+      if (r.bottom < -200 || r.top > vh + 200) return;
+      const sp = parseFloat(el.dataset.speed);
+      const off = hero ? Math.max(0, -r.top) * sp : (r.top + r.height/2 - vh/2) * sp;
+      el.style.transform = `translate3d(0,${off.toFixed(1)}px,0)`;
+    });
+    const mid = vh * 0.35;
+    let active = secs[0];
+    for (const s of secs) if (s.getBoundingClientRect().top <= mid) active = s;
+    const r = active.getBoundingClientRect();
+    let year;
+    if (active.dataset.from){ const a=+active.dataset.from, b=+active.dataset.to; const p = Math.min(1, Math.max(0, (mid - r.top) / Math.max(1, r.height - vh*0.3))); year = Math.round(a + (b-a)*p); }
+    else year = active.dataset.year;
+    if (cy.textContent != year) cy.textContent = year;
+    const lbl = active.dataset.label || '';
+    if (cl.textContent !== lbl) cl.textContent = lbl;
+    const doc = document.documentElement; cb.style.width = (scrollY / Math.max(1, doc.scrollHeight - vh) * 100).toFixed(2) + '%';
+  };
+  addEventListener('scroll', () => { if (!ticking){ ticking = true; requestAnimationFrame(update); } }, {passive:true});
+  addEventListener('resize', update);
+  update();
+})();
+</script>
+</body>
+</html>
