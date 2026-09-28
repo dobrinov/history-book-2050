@@ -1,9 +1,9 @@
 """Build the standalone pages.
 
-- index.html (the book): src/page.html with data/data.json, data/peers.json and data/review.json inlined.
+- index.html (the main page): src/page.html with data/data.json, data/peers.json and data/review.json inlined.
 - what-if/index.html: src/what-if.html with data/whatif.json inlined.
 
-src/styles.css and src/charts.js are shared by the book and the "Какво ако?" page.
+src/styles.css and src/charts.js are shared by the main page and the "Какво ако?" page.
 """
 from pathlib import Path
 

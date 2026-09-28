@@ -1,4 +1,4 @@
-/* Shared helpers and charts for the book and the "Какво ако?" page. */
+/* Shared helpers and charts for the main page and the "Какво ако?" page. */
 const $ = (s, r=document) => r.querySelector(s);
 const $$ = (s, r=document) => [...r.querySelectorAll(s)];
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
