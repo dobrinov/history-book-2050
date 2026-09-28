@@ -264,8 +264,7 @@ sup.ref a::before{content:"["} sup.ref a::after{content:"]"}
 .dim .n{font-family:var(--f-mono);font-size:11px;color:var(--rose)}
 .dim p{font-size:14.5px;color:var(--ink-2);line-height:1.45}
 .dim .src{font-family:var(--f-mono);font-size:11px;color:var(--muted)}
-.dim.primary{background:var(--rose-soft)}
-@media (max-width:980px){.dims{grid-template-columns:repeat(2,minmax(0,1fr))}.dim.primary{grid-column:1/-1}}
+@media (max-width:980px){.dims{grid-template-columns:repeat(2,minmax(0,1fr))}.dim:last-child{grid-column:1/-1}}
 @media (max-width:540px){.dims{grid-template-columns:1fr}}
 .rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 32px;margin-top:32px}
 .rules div{border-top:2px solid var(--ink);padding-top:10px}

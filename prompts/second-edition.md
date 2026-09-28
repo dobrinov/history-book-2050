@@ -11,9 +11,10 @@ Did life get better for ordinary people living in Bulgaria, for whom, and becaus
 which decisions?
 
 METHOD (write this up visibly on the page before any verdicts)
-- Define "good" through everyday-life KPIs: real purchasing power (median, not only
+- Judge "better" across the five dimensions below, none weighted above the others.
+  Track everyday life through concrete KPIs: real purchasing power (median, not only
   mean), inflation, employment, material deprivation and poverty, health and life
-  expectancy, education outcomes, housing, and emigration/demography.
+  expectancy, and housing.
 - Always benchmark against peers (Romania, Croatia, Serbia, Slovakia, Poland, EU
   average). Credit or blame governments for divergence from peers, not for absolute
   trends.
@@ -28,7 +29,7 @@ METHOD (write this up visibly on the page before any verdicts)
 EVALUATION DIMENSIONS
 Assess each government and key decision on separate dimensions, never merged into
 one score:
-1. Everyday life (primary verdict): the KPIs above.
+1. Everyday life: the KPIs above.
 2. Economic foundations: productivity, investment, debt/fiscal position, energy
    security, EU-funds dependence.
 3. Geopolitical position: security, alliances (NATO/EU/Schengen/euro), energy and
